@@ -1,0 +1,89 @@
+﻿Сборка начата 05.11.2024 2:09:42.
+Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\C.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "x64\Release\C.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /IC:\Nix_LabN1\\include /Zi /nologo /W4 /WX /diagnostics:column /Ox /Ob2 /Oi /Ot /Oy /GT /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0710 /D _MBCS /GF /Gm- /EHsc /MD /GS- /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /Fo"x64\Release\\" /Fd"x64\Release\C.pdb" /external:W4 /Gd /TC /FC /errorReport:prompt src\antlr3baserecognizer.c src\antlr3basetree.c src\antlr3basetreeadaptor.c src\antlr3bitset.c src\antlr3collections.c src\antlr3commontoken.c src\antlr3commontree.c src\antlr3commontreeadaptor.c src\antlr3commontreenodestream.c src\antlr3convertutf.c src\antlr3cyclicdfa.c src\antlr3debughandlers.c src\antlr3encodings.c src\antlr3exception.c src\antlr3filestream.c src\antlr3inputstream.c src\antlr3intstream.c src\antlr3lexer.c src\antlr3parser.c src\antlr3rewritestreams.c src\antlr3string.c src\antlr3tokenstream.c src\antlr3treeparser.c
+         antlr3baserecognizer.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3baserecognizer.c(9,13): error C1083: Не удается открыть файл включение: antlr3baserecognizer.h: No such file or directory,
+         antlr3basetree.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3basetree.c(1,13): error C1083: Не удается открыть файл включение: antlr3basetree.h: No such file or directory,
+         antlr3basetreeadaptor.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3basetreeadaptor.c(36,13): error C1083: Не удается открыть файл включение: antlr3basetreeadaptor.h: No such file or directory,
+         antlr3bitset.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3bitset.c(36,13): error C1083: Не удается открыть файл включение: antlr3bitset.h: No such file or directory,
+         antlr3collections.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3collections.c(38,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         antlr3commontoken.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontoken.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         antlr3commontree.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontree.c(38,13): error C1083: Не удается открыть файл включение: antlr3commontree.h: No such file or directory,
+         antlr3commontreeadaptor.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreeadaptor.c(39,13): error C1083: Не удается открыть файл включение: antlr3commontreeadaptor.h: No such file or directory,
+         antlr3commontreenodestream.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreenodestream.c(35,13): error C1083: Не удается открыть файл включение: antlr3commontreenodestream.h: No such file or directory,
+         antlr3convertutf.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3convertutf.c(42,10): error C1083: Не удается открыть файл включение: antlr3convertutf.h: No such file or directory,
+         antlr3cyclicdfa.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3cyclicdfa.c(45,13): error C1083: Не удается открыть файл включение: antlr3defs.h: No such file or directory,
+         antlr3debughandlers.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3debughandlers.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         antlr3encodings.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3encodings.c(39,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         antlr3exception.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3exception.c(35,13): error C1083: Не удается открыть файл включение: antlr3exception.h: No such file or directory,
+         antlr3filestream.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3filestream.c(47,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         antlr3inputstream.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3inputstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3input.h: No such file or directory,
+         antlr3intstream.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3intstream.c(36,13): error C1083: Не удается открыть файл включение: antlr3intstream.h: No such file or directory,
+         antlr3lexer.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3lexer.c(40,13): error C1083: Не удается открыть файл включение: antlr3lexer.h: No such file or directory,
+         antlr3parser.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3parser.c(34,13): error C1083: Не удается открыть файл включение: antlr3parser.h: No such file or directory,
+         antlr3rewritestreams.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3rewritestreams.c(36,13): error C1083: Не удается открыть файл включение: antlr3rewritestreams.h: No such file or directory,
+         Компиляция...
+         antlr3string.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3string.c(34,13): error C1083: Не удается открыть файл включение: antlr3string.h: No such file or directory,
+         antlr3tokenstream.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3tokenstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3tokenstream.h: No such file or directory,
+         antlr3treeparser.c
+     1>C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3treeparser.c(34,13): error C1083: Не удается открыть файл включение: antlr3treeparser.h: No such file or directory,
+     1>Сборка проекта "C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\C.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\C.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3baserecognizer.c(9,13): error C1083: Не удается открыть файл включение: antlr3baserecognizer.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3basetree.c(1,13): error C1083: Не удается открыть файл включение: antlr3basetree.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3basetreeadaptor.c(36,13): error C1083: Не удается открыть файл включение: antlr3basetreeadaptor.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3bitset.c(36,13): error C1083: Не удается открыть файл включение: antlr3bitset.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3collections.c(38,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontoken.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontree.c(38,13): error C1083: Не удается открыть файл включение: antlr3commontree.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreeadaptor.c(39,13): error C1083: Не удается открыть файл включение: antlr3commontreeadaptor.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreenodestream.c(35,13): error C1083: Не удается открыть файл включение: antlr3commontreenodestream.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3convertutf.c(42,10): error C1083: Не удается открыть файл включение: antlr3convertutf.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3cyclicdfa.c(45,13): error C1083: Не удается открыть файл включение: antlr3defs.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3debughandlers.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3encodings.c(39,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3exception.c(35,13): error C1083: Не удается открыть файл включение: antlr3exception.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3filestream.c(47,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3inputstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3input.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3intstream.c(36,13): error C1083: Не удается открыть файл включение: antlr3intstream.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3lexer.c(40,13): error C1083: Не удается открыть файл включение: antlr3lexer.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3parser.c(34,13): error C1083: Не удается открыть файл включение: antlr3parser.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3rewritestreams.c(36,13): error C1083: Не удается открыть файл включение: antlr3rewritestreams.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3string.c(34,13): error C1083: Не удается открыть файл включение: antlr3string.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3tokenstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3tokenstream.h: No such file or directory,
+         C:\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3treeparser.c(34,13): error C1083: Не удается открыть файл включение: antlr3treeparser.h: No such file or directory,
+
+    Предупреждений: 0
+    Ошибок: 23
+
+Прошло времени 00:00:01.27

@@ -1,0 +1,49 @@
+﻿  antlr3baserecognizer.c
+  antlr3basetree.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3baserecognizer.c(9,13): error C1083: Не удается открыть файл включение: antlr3baserecognizer.h: No such file or directory,
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3basetree.c(1,13): error C1083: Не удается открыть файл включение: antlr3basetree.h: No such file or directory,
+  antlr3basetreeadaptor.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3basetreeadaptor.c(36,13): error C1083: Не удается открыть файл включение: antlr3basetreeadaptor.h: No such file or directory,
+  antlr3bitset.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3bitset.c(36,13): error C1083: Не удается открыть файл включение: antlr3bitset.h: No such file or directory,
+  antlr3collections.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3collections.c(38,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+  antlr3commontoken.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3commontoken.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+  antlr3commontree.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3commontree.c(38,13): error C1083: Не удается открыть файл включение: antlr3commontree.h: No such file or directory,
+  antlr3commontreeadaptor.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreeadaptor.c(39,13): error C1083: Не удается открыть файл включение: antlr3commontreeadaptor.h: No such file or directory,
+  antlr3commontreenodestream.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3commontreenodestream.c(35,13): error C1083: Не удается открыть файл включение: antlr3commontreenodestream.h: No such file or directory,
+  antlr3convertutf.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3convertutf.c(42,10): error C1083: Не удается открыть файл включение: antlr3convertutf.h: No such file or directory,
+  antlr3cyclicdfa.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3cyclicdfa.c(45,13): error C1083: Не удается открыть файл включение: antlr3defs.h: No such file or directory,
+  antlr3debughandlers.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3debughandlers.c(36,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+  antlr3encodings.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3encodings.c(39,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+  antlr3exception.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3exception.c(35,13): error C1083: Не удается открыть файл включение: antlr3exception.h: No such file or directory,
+  antlr3filestream.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3filestream.c(47,13): error C1083: Не удается открыть файл включение: antlr3.h: No such file or directory,
+  antlr3inputstream.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3inputstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3input.h: No such file or directory,
+  antlr3intstream.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3intstream.c(36,13): error C1083: Не удается открыть файл включение: antlr3intstream.h: No such file or directory,
+  antlr3lexer.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3lexer.c(40,13): error C1083: Не удается открыть файл включение: antlr3lexer.h: No such file or directory,
+  antlr3parser.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3parser.c(34,13): error C1083: Не удается открыть файл включение: antlr3parser.h: No such file or directory,
+  antlr3rewritestreams.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3rewritestreams.c(36,13): error C1083: Не удается открыть файл включение: antlr3rewritestreams.h: No such file or directory,
+  Создание кода...
+  Компиляция...
+  antlr3string.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3string.c(34,13): error C1083: Не удается открыть файл включение: antlr3string.h: No such file or directory,
+  antlr3tokenstream.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3tokenstream.c(34,13): error C1083: Не удается открыть файл включение: antlr3tokenstream.h: No such file or directory,
+  antlr3treeparser.c
+C:\Users\Дмитрий\source\repos\Nix_LabN1\libantlr3c-3.4\src\antlr3treeparser.c(34,13): error C1083: Не удается открыть файл включение: antlr3treeparser.h: No such file or directory,
+  Создание кода...

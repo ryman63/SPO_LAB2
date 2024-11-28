@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Array.c" />
+    <ClCompile Include="src\ast.c" />
+    <ClCompile Include="src\custom_langLexer.c" />
+    <ClCompile Include="src\custom_langParser.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\myParser.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Array.h" />
+    <ClInclude Include="src\ast.h" />
+    <ClInclude Include="src\custom_langLexer.h" />
+    <ClInclude Include="src\custom_langParser.h" />
+    <ClInclude Include="src\myParser.h" />
+    <ClInclude Include="libantlr3c-3.4\include\antlr3tokenstream.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3treeparser.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3baserecognizer.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3basetree.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3basetreeadaptor.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3bitset.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3collections.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3commontoken.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3commontree.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3commontreeadaptor.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3commontreenodestream.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3convertutf.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3cyclicdfa.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3debugeventlistener.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3defs.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3encodings.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3errors.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3exception.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3filestream.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3input.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3interfaces.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3intstream.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3lexer.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3memory.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3parser.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3parsetree.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3recognizersharedstate.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3rewritestreams.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3string.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libantlr3c-3.4\include\antlr3config.h">
+      <Filter>libs\antlrIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\c14n.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\catalog.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\chvalid.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\debugXML.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\dict.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\DOCBparser.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\encoding.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\entities.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\globals.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\hash.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\HTMLparser.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\HTMLtree.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\list.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\nanoftp.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\nanohttp.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\parser.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\parserInternals.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\pattern.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\relaxng.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\SAX.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\SAX2.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\schemasInternals.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\schematron.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\threads.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\tree.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\uri.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\valid.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xinclude.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xlink.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlautomata.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlerror.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlexports.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlIO.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlmemory.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlmodule.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlreader.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlregexp.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlsave.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlschemas.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlschemastypes.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlstring.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlunicode.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlversion.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlwin32version.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xmlwriter.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xpath.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xpathInternals.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml\xpointer.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\win32config.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\wsockcompat.h">
+      <Filter>libs\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProgramUnit.h" />
+    <ClInclude Include="src\cfg.h" />
+    <ClInclude Include="src\SourceFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+    <None Include="output.dgml" />
+    <None Include="packages.config" />
+    <None Include="src\custom_lang.tokens" />
+    <None Include="libxml2-vc140-static-32_64.2.9.4.1\libxml2.so.2.9.14">
+      <Filter>libs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="libs">
+      <UniqueIdentifier>{4bb37f8f-f192-41ce-96ea-841da6ebdaab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\antlrIncludes">
+      <UniqueIdentifier>{a8ae2b0d-80ee-452a-bc27-04175f59e91d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libxml2">
+      <UniqueIdentifier>{cdc829bf-fbe6-453f-8bc1-29418408e690}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libantlr3c-3.4\.libs\libantlr3c.a">
+      <Filter>libs</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

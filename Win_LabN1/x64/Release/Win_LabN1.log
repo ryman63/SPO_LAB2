@@ -1,0 +1,15 @@
+﻿Сборка начата 05.11.2024 17:25:36.
+Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN1\Win_LabN1\Win_LabN1.vcxproj" в узле 2 (целевые объекты Build).
+     1>C:\Nix_LabN1\Win_LabN1\Win_LabN1.vcxproj(163,5): error : Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: ..\libantlr3c-3.4\packages\libxml2-vc140-static-32_64.2.9.4.1\build\native\libxml2-vc140-static-32_64.targets.
+     1>Сборка проекта "C:\Nix_LabN1\Win_LabN1\Win_LabN1.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Nix_LabN1\Win_LabN1\Win_LabN1.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект EnsureNuGetPackageBuildImports) -> 
+         C:\Nix_LabN1\Win_LabN1\Win_LabN1.vcxproj(163,5): error : Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: ..\libantlr3c-3.4\packages\libxml2-vc140-static-32_64.2.9.4.1\build\native\libxml2-vc140-static-32_64.targets.
+
+    Предупреждений: 0
+    Ошибок: 1
+
+Прошло времени 00:00:00.01

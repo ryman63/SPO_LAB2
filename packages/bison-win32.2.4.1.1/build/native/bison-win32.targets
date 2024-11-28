@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="bison-win32_init">
+  <PropertyGroup>
+    <ExecutablePath>$(MSBuildThisFileDirectory)../../tools/native/bin/;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-bison-win32 Condition="'$(Linkage-bison-win32)' == ''">dynamic</Linkage-bison-win32>
+    <CallingConvention-bison-win32 Condition="'$(CallingConvention-bison-win32)' == ''">cdecl</CallingConvention-bison-win32>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAS_BISONWIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <UsingTask TaskName="bison-win32_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="bison-win32_init">
+    <bison-win32_Contains Text="Linkage-dynamic" Library="bison-win32" Value="dynamic" Condition="'$(Linkage-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="Linkage-static" Library="bison-win32" Value="static" Condition="'$(Linkage-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="Linkage-ltcg" Library="bison-win32" Value="ltcg" Condition="'$(Linkage-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="Linkage-sxs" Library="bison-win32" Value="sxs" Condition="'$(Linkage-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="CallingConvention-cdecl" Library="bison-win32" Value="cdecl" Condition="'$(CallingConvention-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="CallingConvention-stdcall" Library="bison-win32" Value="stdcall" Condition="'$(CallingConvention-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="CallingConvention-fastcall" Library="bison-win32" Value="fastcall" Condition="'$(CallingConvention-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="CallingConvention-thiscall" Library="bison-win32" Value="thiscall" Condition="'$(CallingConvention-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-bison-win32" />
+    </bison-win32_Contains>
+    <bison-win32_Contains Text="CallingConvention-clrcall" Library="bison-win32" Value="clrcall" Condition="'$(CallingConvention-bison-win32)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-bison-win32" />
+    </bison-win32_Contains>
+  </Target>
+</Project>

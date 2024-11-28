@@ -1,0 +1,34 @@
+def calculateSum(a of int, b of int) of int
+    if a > 0 then
+        def innerCalculation(x of int, y of int) of int
+            return (x + y) * 2;
+        end
+        result = innerCalculation(a, b);
+    else
+        result = 0;
+    end
+    return result;
+end
+
+def checkArrayValues(arr of int array[10])
+    begin
+        while i < 10
+            if arr[i] > 0 then
+                arr[i] = arr[i] * 2;
+            else
+                arr[i] = 0;
+            end
+            i = i + 1;
+        end
+    end
+end
+
+def main()
+    array = int array[10];
+    for i of int = 0 to 9
+        array[i] = i * 3;
+    end
+
+    checkArrayValues(array);
+    sumResult = calculateSum(5, 10);
+end

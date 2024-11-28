@@ -1,0 +1,309 @@
+grammar custom_lang;
+
+options {
+    output=AST;
+    language=C;
+    backtrack=true;
+
+}
+
+// Лексические правила (tokens)
+TYPE_REF: 'typeRef';
+FUNC_SIGNATURE: 'funcSignature';
+SOURCE_ITEM: 'sourceItem';
+STATEMENT: 'statement';
+EXPR: 'expr';
+BUILTIN: 'builtin';
+CUSTOM: 'custom';
+ARRAY: 'array';
+ARG: 'arg';
+ARG_LIST: 'argList';
+RANGE_LIST: 'rangeList';
+FUNC_DEF: 'funcDef';
+IF_STATEMENT: 'if';
+LOOP_STATEMENT: 'loop';
+REPEAT_STATEMENT: 'repeat';
+RETURN_STATEMENT: 'return';
+BREAK_STATEMENT: 'break';
+EXPRESSION_STATEMENT: 'expression';
+ASSIGNMENT_EXPR: 'assignment';
+BLOCK_STATEMENT: 'block';
+BINARY_EXPR: 'binary';
+UNARY_EXPR: 'unary';
+BRACES_EXPR: 'braces';
+CALL_EXPR: 'call';
+SLICE_EXPR: 'slice';
+PLACE_EXPR: 'place';
+LITERAL_EXPR: 'literal';
+BOOL : 'true' | 'false' ;
+IDENTIFIER : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
+STRING : '"' ( ~('\\'|'"') | '\\' . )* '"' ;
+CHAR : '\'' (~'\'') '\'' ;
+HEX : '0' ('x'|'X') ('0'..'9'|'A'..'F'|'a'..'f')+ ;
+BITS : '0' ('b'|'B') ('0'|'1')+ ;
+DEC : ('0'..'9')+;
+
+WS : (' '|'\t'|'\n')+ { $channel=HIDDEN; } ;
+
+// Операторы
+LTS: '<' ;
+LTSE: '<=' ;
+ADD: '+' ;
+SUB: '-' ;
+MUL: '*' ;
+DIV: '/' ;
+MOD: '%' ;
+AND: '&&' ;
+OR: '||' ;
+EQ: '==' ;
+NEQ: '!=' ;
+GT: '>' ;
+GTE: '>=' ;
+ASSIGN: '=' ;
+
+// Синтаксические правила
+source
+    : sourceItem* -> ^(SOURCE_ITEM sourceItem*)
+    ;
+
+sourceItem
+    : funcDef
+    ;
+
+type 
+    : basicType -> ^(TYPE_REF basicType)
+    ;
+
+basicType
+    : 'bool' -> ^(BUILTIN 'bool')
+    | 'byte' -> ^(BUILTIN 'byte')
+    | 'int' -> ^(BUILTIN 'int')
+    | 'uint' -> ^(BUILTIN 'uint')
+    | 'long' -> ^(BUILTIN 'long')
+    | 'ulong' -> ^(BUILTIN 'ulong')
+    | 'char' -> ^(BUILTIN 'char')
+    | 'string' -> ^(BUILTIN 'string')
+    | IDENTIFIER -> ^(CUSTOM IDENTIFIER)
+    ;
+
+typeRef
+    : type
+    | arrayType -> ^(TYPE_REF arrayType)
+    ;
+
+arrayType
+    : type 'array' ('[' DEC ']') -> ^(ARRAY type DEC)
+    ;
+
+funcSignature
+    : IDENTIFIER '(' argList ')' ('of' typeRef)? -> ^(FUNC_SIGNATURE IDENTIFIER argList typeRef?)
+    ;
+
+argList
+    : (arg (',' arg)*)? -> ^(ARG_LIST (arg (arg)*)?)
+    ;
+
+arg
+    : IDENTIFIER ('of' typeRef)? -> ^(ARG IDENTIFIER typeRef?)
+    ;
+
+funcDef
+    : 'def' funcSignature basicStatement* 'end' -> ^(FUNC_DEF funcSignature basicStatement*)
+    ;
+
+basicStatement : statement -> ^(STATEMENT statement);
+
+statement
+    : ifStatement            -> ^(IF_STATEMENT ifStatement)
+    | loopStatement          -> ^(LOOP_STATEMENT loopStatement)
+    | repeatStatement        -> ^(REPEAT_STATEMENT repeatStatement)
+    | breakStatement         -> ^(BREAK_STATEMENT breakStatement)
+    | expressionStatement    -> ^(EXPRESSION_STATEMENT expressionStatement)
+    | blockStatement         -> ^(BLOCK_STATEMENT blockStatement)
+    ;
+
+ifStatement
+    : 'if' condition=expression 'then' ifBlock=basicStatement ('else' elseBlock=basicStatement)?
+      -> 'if' $condition $ifBlock 'else' ($elseBlock)?
+    ;
+
+
+loopStatement
+    : ('while'|'until') expression basicStatement* 'end'
+    ;
+
+repeatStatement
+    : 'repeat' basicStatement ('while'|'until') expression ';'
+    ;
+
+breakStatement
+    : 'break' ';'!
+    ;
+
+expressionStatement
+    : expression ';'!
+    ;
+
+blockStatement
+    : ('begin' | '{') (basicStatement | sourceItem)* ('end' | '}')
+    ;
+
+argument_expression_list
+    :   assignment_expression (',' assignment_expression)* -> ^(CALL_EXPR assignment_expression assignment_expression*)
+    ;
+
+additive_expression
+    : (multiplicative_expression) ('+'^ multiplicative_expression | '-'^ multiplicative_expression)*
+    ;
+
+multiplicative_expression
+    : (unary_expression) ('*'^ unary_expression | '/'^ unary_expression | '%'^ unary_expression)*
+    ;
+
+unary_expression
+    : postfix_expression
+    | '++'^ unary_expression
+    | '--'^ unary_expression
+    ;
+
+postfix_expression
+    :   primary_expression
+		(     slice^
+			| ('(' ')')!
+			| '('! argument_expression_list^ ')'!
+			| '++'
+			| '--'
+        )*
+    ;
+
+unary_operator
+    : '&'
+    | '*'
+    | '+'
+    | '-'
+    | '~'
+    | '!'
+    ;
+
+primary_expression
+    : IDENTIFIER
+    | literal
+    | '('! assignment_expression ')'!
+    ;
+
+/////
+
+expression
+    : assignment_expression (',' assignment_expression)* -> ^(EXPR assignment_expression assignment_expression*)
+    ;
+
+constant_expression
+    : conditional_expression
+    ;
+
+assignment_expression
+    : lvalue assignment_operator^ assignment_expression
+    | conditional_expression
+    ;
+	
+lvalue
+    :	unary_expression
+    ;
+
+assignment_operator
+    : '='
+    | '*='
+    | '/='
+    | '%='
+    | '+='
+    | '-='
+    | '<<='
+    | '>>='
+    | '&='
+    | '^='
+    | '|='
+    ;
+
+conditional_expression
+    : logical_or_expression ('?' expression ':' conditional_expression)?
+    ;
+
+logical_or_expression
+    : logical_and_expression ('||'^ logical_and_expression)*
+    ;
+
+logical_and_expression
+    : inclusive_or_expression ('&&'^ inclusive_or_expression)*
+    ;
+
+inclusive_or_expression
+    : exclusive_or_expression ('|'^ exclusive_or_expression)*
+    ;
+
+exclusive_or_expression
+    : and_expression ('^'^ and_expression)*
+    ;
+
+and_expression
+    : equality_expression ('&'^ equality_expression)*
+    ;
+
+equality_expression
+    : relational_expression (('=='|'!=')^ relational_expression)*
+    ;
+
+relational_expression
+    : shift_expression (('<'|'>'|'<='|'>=')^ shift_expression)*
+    ;
+
+shift_expression
+    : additive_expression (('<<'|'>>')^ additive_expression)*
+    ;
+
+
+slice
+    : '[' rangeList ']' -> ^(SLICE_EXPR rangeList)
+    ;
+
+place
+    : IDENTIFIER -> ^(PLACE_EXPR IDENTIFIER)
+    ;
+
+rangeList
+    : range (',' range)* -> ^(RANGE_LIST range (range)*)
+    ;
+
+range
+    : expression ('..'^ expression)?
+    ;
+
+literal
+    : BOOL -> ^(LITERAL_EXPR BOOL)
+    | STRING -> ^(LITERAL_EXPR STRING)
+    | CHAR -> ^(LITERAL_EXPR CHAR)
+    | HEX -> ^(LITERAL_EXPR HEX)
+    | BITS -> ^(LITERAL_EXPR BITS)
+    | DEC -> ^(LITERAL_EXPR DEC)
+    ;
+
+binOp
+    : ADD
+    | SUB
+    | MUL
+    | DIV
+    | MOD
+    | AND
+    | OR
+    | EQ
+    | NEQ
+    | GT
+    | LTS
+    | GTE
+    | LTSE
+    ;
+
+unOp
+    : '++'
+    | '--'
+    | '!' 
+    ;

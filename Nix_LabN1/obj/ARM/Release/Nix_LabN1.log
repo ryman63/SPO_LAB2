@@ -1,0 +1,94 @@
+﻿Сборка начата 05.11.2024 17:07:34.
+Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN1\Nix_LabN1\Nix_LabN1.vcxproj" в узле 2 (целевые объекты Build).
+     1>_ValidateSources:
+         Проверка исходных файлов
+       _CopySources:
+         Удаленное копирование исходных файлов в "127.0.0.1"
+         Копирование файлов пропущено, так как файлы находятся в актуальном состоянии.
+       _Clean_BuildUpToDate:
+         Файл "C:\Nix_LabN1\Nix_LabN1\obj\ARM\Release\Nix_LabN1.builduptodate" удаляется.
+       _Build_Common:
+         Команда сборки не настроена, действие пропущено.
+         Вызов "make all", рабочий каталог: "/home/user/projects/Nix_LabN1/"
+         gcc -g -O0 -o ./app src/*.c -I/usr/include/antlr3/runtime/C/include -I/usr/include/antlr3/runtime/C -I/usr/include/libxml2 -Dsize_t=size_t -L/home/user/projects/Nix_LabN1/.libs -lantlr3c -lxml2
+         
+         src/Array.c: In function ‘removeAt’:
+         src/Array.c:34:9: warning: ‘return’ with no value, in function returning non-void
+            34 |         return;
+               |         ^~~~~~
+         src/Array.c:15:7: note: declared here
+            15 | void* removeAt(Array* arr, size_t index) {
+               |       ^~~~~~~~
+         src/Array.c: In function ‘popFirst’:
+         src/Array.c:54:9: warning: ‘return’ with no value, in function returning non-void
+            54 |         return;
+               |         ^~~~~~
+         src/Array.c:36:7: note: declared here
+            36 | void* popFirst(Array* arr) {
+               |       ^~~~~~~~
+         
+         src/ast.c: In function ‘createNode’:
+         src/ast.c:28:24: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+            28 |         newNode->token = token;
+               |                        ^
+         
+         src/ast.c: In function ‘addNodesAndLinks’:
+         src/ast.c:73:9: warning: implicit declaration of function ‘sprintf_s’; did you mean ‘sprintf’? [-Wimplicit-function-declaration]
+            73 |         sprintf_s(id_str, 12, "%d", node->id); // ����������� id � ������
+               |         ^~~~~~~~~
+               |         sprintf
+         
+         src/custom_langLexer.c:220: warning: "CUSTOM" redefined
+           220 | #define         CUSTOM                                  LEXSTATE->custom
+               | 
+         In file included from src/custom_langLexer.c:46:
+         src/custom_langLexer.h:658: note: this is the location of the previous definition
+           658 | #define CUSTOM      20
+               | 
+         src/custom_langLexer.c: In function ‘mCUSTOM’:
+         src/custom_langLexer.c:2104:21: warning: assignment to ‘ANTLR3_UINT32’ {aka ‘unsigned int’} from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+          2104 |     _type           = CUSTOM;
+               |                     ^
+         
+         src/custom_langParser.c: In function ‘synpred24_custom_lang_fragment’:
+         src/custom_langParser.c:16898:9: warning: useless type name in empty declaration
+         16898 |         void ;
+               |         ^~~~
+         
+         /usr/bin/ld: пропускается несовместимый /home/user/projects/Nix_LabN1/.libs/libantlr3c.a при поиске -lantlr3c
+         /usr/bin/ld: невозможно найти -lantlr3c: Нет такого файла или каталога
+         
+     1>src/Array.c(34,9): warning : ‘return’ with no value, in function returning non-void
+       src/Array.c(15,7): message : declared here
+     1>src/Array.c(54,9): warning : ‘return’ with no value, in function returning non-void
+       src/Array.c(36,7): message : declared here
+     1>src/ast.c(28,24): warning : assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     1>src/ast.c(73,9): warning : implicit declaration of function ‘sprintf_s’; did you mean ‘sprintf’? [-Wimplicit-function-declaration]
+     1>src/custom_langLexer.c(2104,21): warning : assignment to ‘ANTLR3_UINT32’ {aka ‘unsigned int’} from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+     1>src/custom_langParser.c(16898,9): warning : useless type name in empty declaration
+         collect2: error: ld returned 1 exit status
+         make: *** [makefile:8: my_program_build] Ошибка 1
+         
+     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Application Type\Linux\1.0\Linux.Makefile.Targets(347,5): error : make all завершает работу с кодом 2. Дополнительные сведения см. в окне вывода, которое можно открыть, выбрав пункт меню "Окно вывода" > "Выходные данные сборки". (Примечание: для отображения дополнительных сведений в окне вывода может потребоваться изменить уровень детализации выходных данных сборки в разделе "Инструменты" > "Параметры").
+     1>Сборка проекта "C:\Nix_LabN1\Nix_LabN1\Nix_LabN1.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Nix_LabN1\Nix_LabN1\Nix_LabN1.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _Build_Common) -> 
+         src/Array.c(34,9): warning : ‘return’ with no value, in function returning non-void
+         src/Array.c(54,9): warning : ‘return’ with no value, in function returning non-void
+         src/ast.c(28,24): warning : assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+         src/ast.c(73,9): warning : implicit declaration of function ‘sprintf_s’; did you mean ‘sprintf’? [-Wimplicit-function-declaration]
+         src/custom_langLexer.c(2104,21): warning : assignment to ‘ANTLR3_UINT32’ {aka ‘unsigned int’} from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+         src/custom_langParser.c(16898,9): warning : useless type name in empty declaration
+
+
+       "C:\Nix_LabN1\Nix_LabN1\Nix_LabN1.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _Build_Common) -> 
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Application Type\Linux\1.0\Linux.Makefile.Targets(347,5): error : make all завершает работу с кодом 2. Дополнительные сведения см. в окне вывода, которое можно открыть, выбрав пункт меню "Окно вывода" > "Выходные данные сборки". (Примечание: для отображения дополнительных сведений в окне вывода может потребоваться изменить уровень детализации выходных данных сборки в разделе "Инструменты" > "Параметры").
+
+    Предупреждений: 6
+    Ошибок: 1
+
+Прошло времени 00:00:18.78
