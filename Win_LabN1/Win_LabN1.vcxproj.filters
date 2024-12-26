@@ -44,6 +44,12 @@
     <ClInclude Include="..\Nix_LabN1\src\SourceFile.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="..\Nix_LabN1\src\FlowGraphBuilder.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Nix_LabN1\src\stack.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Nix_LabN1\src\main.c">
@@ -62,6 +68,21 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\Nix_LabN1\src\custom_langParser.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Nix_LabN1\src\ProgramUnit.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Nix_LabN1\src\SourceFile.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Nix_LabN1\src\FlowGraphBuilder.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Nix_LabN1\src\cfg.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Nix_LabN1\src\stack.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

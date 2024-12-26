@@ -1,8 +1,9 @@
 #include "ast.h"
 
-AstNode* insert(AstNode* root, const char* token)
+AstNode* insert(AstNode* root, const char* token, int line)
 {
 	AstNode* newNode = createNode(token);
+	newNode->line = line;
 
 	newNode->parent = root;
 
@@ -11,7 +12,7 @@ AstNode* insert(AstNode* root, const char* token)
 	return newNode;
 }
 
-void AddChild(AstNode* parent, AstNode* child)
+void addChild(AstNode* parent, AstNode* child)
 {
 	child->parent = parent;
 	pushBack(parent->children, child);
@@ -64,7 +65,7 @@ void freeNode(AstNode* node)
 	//free(node);
 }
 
-AstNode* dfs(AstNode* root, Array* arr, char* value)
+void dfs(AstNode* root, Array* arr, char* value)
 {
 	if (!strcmp(root->token, value)) {
 		pushBack(arr, root);

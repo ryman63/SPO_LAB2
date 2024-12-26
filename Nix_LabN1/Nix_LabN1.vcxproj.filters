@@ -7,6 +7,11 @@
     <ClCompile Include="src\custom_langParser.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\myParser.c" />
+    <ClCompile Include="src\ProgramUnit.c" />
+    <ClCompile Include="src\SourceFile.c" />
+    <ClCompile Include="src\FlowGraphBuilder.c" />
+    <ClCompile Include="src\cfg.c" />
+    <ClCompile Include="src\stack.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Array.h" />
@@ -260,6 +265,8 @@
     <ClInclude Include="src\ProgramUnit.h" />
     <ClInclude Include="src\cfg.h" />
     <ClInclude Include="src\SourceFile.h" />
+    <ClInclude Include="src\FlowGraphBuilder.h" />
+    <ClInclude Include="src\stack.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="makefile" />

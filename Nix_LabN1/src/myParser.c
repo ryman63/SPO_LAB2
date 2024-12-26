@@ -1,7 +1,10 @@
 #include "myParser.h"
 
 void fillAst(pANTLR3_BASE_TREE tree, AstNode* root) {
-    AstNode* node = insert(root, (const char*) tree->getText(tree)->chars);
+    AstNode* node = insert
+        (root, 
+        (const char*) tree->getText(tree)->chars, 
+        (int)tree->getLine);
     size_t childCount = tree->getChildCount(tree);
 
     for (size_t i = 0; i < childCount; i++) {
@@ -97,13 +100,13 @@ void fixAst(AstNode* node) {
                 AstNode* createRangeListNode = createNode("RANGE_LIST");
 
                 // делаем привязки
-                AddChild(createSliceNode, createRangeListNode);
-                AddChild(createRangeListNode, expr);
-                AddChild(parent, createSliceNode);
+                addChild(createSliceNode, createRangeListNode);
+                addChild(createRangeListNode, expr);
+                addChild(parent, createSliceNode);
 
                 // на предпоследней итерации привязываем название массива
                 if (children->size == 1) {
-                    AddChild(createSliceNode, identifierOfArray);
+                    addChild(createSliceNode, identifierOfArray);
                 }
 
                 // спускаемся ниже

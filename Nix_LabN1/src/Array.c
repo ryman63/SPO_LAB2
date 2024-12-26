@@ -74,6 +74,8 @@ Array* buildArray(size_t itemSize, size_t initialCapacity)
 	array->capacity = initialCapacity;
 	array->itemSize = itemSize;
 	array->size = 0;
+
+	return array;
 }
 
 void resizeArray(Array* array)

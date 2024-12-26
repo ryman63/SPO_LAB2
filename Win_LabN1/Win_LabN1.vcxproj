@@ -146,17 +146,24 @@
     <ClInclude Include="..\Nix_LabN1\src\cfg.h" />
     <ClInclude Include="..\Nix_LabN1\src\custom_langLexer.h" />
     <ClInclude Include="..\Nix_LabN1\src\custom_langParser.h" />
+    <ClInclude Include="..\Nix_LabN1\src\FlowGraphBuilder.h" />
     <ClInclude Include="..\Nix_LabN1\src\myParser.h" />
     <ClInclude Include="..\Nix_LabN1\src\ProgramUnit.h" />
     <ClInclude Include="..\Nix_LabN1\src\SourceFile.h" />
+    <ClInclude Include="..\Nix_LabN1\src\stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Nix_LabN1\src\Array.c" />
     <ClCompile Include="..\Nix_LabN1\src\ast.c" />
+    <ClCompile Include="..\Nix_LabN1\src\cfg.c" />
     <ClCompile Include="..\Nix_LabN1\src\custom_langLexer.c" />
     <ClCompile Include="..\Nix_LabN1\src\custom_langParser.c" />
+    <ClCompile Include="..\Nix_LabN1\src\FlowGraphBuilder.c" />
     <ClCompile Include="..\Nix_LabN1\src\main.c" />
     <ClCompile Include="..\Nix_LabN1\src\myParser.c" />
+    <ClCompile Include="..\Nix_LabN1\src\ProgramUnit.c" />
+    <ClCompile Include="..\Nix_LabN1\src\SourceFile.c" />
+    <ClCompile Include="..\Nix_LabN1\src\stack.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

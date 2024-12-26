@@ -1,38 +1,47 @@
-﻿Сборка начата 28.11.2024 2:55:33.
+﻿Сборка начата 26.12.2024 11:16:09.
 Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN2\Win_LabN1\Win_LabN1.vcxproj" в узле 2 (целевые объекты Build).
-     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Win_LabN1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+     1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-         Создание каталога "x64\Debug\Win_LabN2.tlog\".
-     1>InitializeBuildStatus:
+       InitializeBuildStatus:
          Создание "x64\Debug\Win_LabN2.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "x64\Debug\Win_LabN2.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /I"C:\Nix_LabN2\packages\libxml2-vc140-static-32_64.2.9.4.1\build\native\..\..\lib\native\include\\" /I"C:\Nix_LabN2\Win_LabN1\\..\Nix_LabN1\libantlr3c-3.4\include" /ZI /JMC /nologo /W4 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W4 /Gd /TC /FC /errorReport:prompt ..\Nix_LabN1\src\Array.c ..\Nix_LabN1\src\ast.c ..\Nix_LabN1\src\custom_langLexer.c ..\Nix_LabN1\src\custom_langParser.c ..\Nix_LabN1\src\main.c ..\Nix_LabN1\src\myParser.c
-         Array.c
-         ast.c
-         custom_langLexer.c
-         custom_langParser.c
-     1>C:\Nix_LabN2\Nix_LabN1\src\custom_langLexer.c(233,1): warning C4005: CUSTOM: изменение макроопределения
-             C:\Nix_LabN2\Nix_LabN1\src\custom_langLexer.h(792,1):
-             см. предыдущее определение "CUSTOM"
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /I"C:\Nix_LabN2\packages\libxml2-vc140-static-32_64.2.9.4.1\build\native\..\..\lib\native\include\\" /I"C:\Nix_LabN2\Win_LabN1\\..\Nix_LabN1\libantlr3c-3.4\include" /ZI /JMC /nologo /W4 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W4 /Gd /TC /FC /errorReport:prompt ..\Nix_LabN1\src\FlowGraphBuilder.c
+         FlowGraphBuilder.c
+     1>C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(16,2): warning C4091: typedef : пропускается слева от "BuiltIn", когда ни одна переменная не объявлена
+         (компиляция исходного файла "../Nix_LabN1/src/FlowGraphBuilder.c")
          
-     1>C:\Nix_LabN2\Nix_LabN1\src\custom_langLexer.c(3041,15): warning C4047: =: "ANTLR3_UINT32" отличается по уровням косвенного обращения от "void *"
-     1>C:\Nix_LabN2\Nix_LabN1\src\custom_langParser.c(11201,7): warning C4091:  : пропускается слева от "void", когда ни одна переменная не объявлена
-         main.c
-         myParser.c
-     1>C:\Nix_LabN2\Nix_LabN1\src\myParser.c(8,38): warning C4267: функция: преобразование из "size_t" в "ANTLR3_UINT32"; возможна потеря данных
-     1>C:\Nix_LabN2\Nix_LabN1\src\myParser.c(91,41): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-         Создание кода...
-     1>C:\Nix_LabN2\Nix_LabN1\src\ast.c(79): warning C4716: dfs: должна возвращать значение
-     1>C:\Nix_LabN2\Nix_LabN1\src\Array.c(63): warning C4716: pushBack: должна возвращать значение
-     1>C:\Nix_LabN2\Nix_LabN1\src\Array.c(77): warning C4716: buildArray: должна возвращать значение
+     1>C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(22,2): warning C4091: typedef : пропускается слева от "Type", когда ни одна переменная не объявлена
+         (компиляция исходного файла "../Nix_LabN1/src/FlowGraphBuilder.c")
+         
+     1>C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(27,2): warning C4091: typedef : пропускается слева от "CustomType", когда ни одна переменная не объявлена
+         (компиляция исходного файла "../Nix_LabN1/src/FlowGraphBuilder.c")
+         
+     1>C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(37,2): warning C4091: typedef : пропускается слева от "ArrayType", когда ни одна переменная не объявлена
+         (компиляция исходного файла "../Nix_LabN1/src/FlowGraphBuilder.c")
+         
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(42,15): warning C4456: объявление "i" скрывает предыдущее локальное объявление
+             C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(18,14):
+              см. объявление "i"
+         
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(50,9): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(155,41): warning C4047: функция: "CfgNode *" отличается по уровням косвенного обращения от "CfgNode **"
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(155,41): warning C4024: handleBreakStatement: различные типы для формального и фактического параметров 2
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(240,42): warning C4130: ==: логическая операция с адресом строковой константы
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(254,68): warning C4028: формальный параметр 2 отличается от объявления
+     1>C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(168): warning C4715: handleStatement: значение возвращается не при всех путях выполнения
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Nix_LabN2\x64\Debug\Win_LabN2.exe" /INCREMENTAL /ILK:"x64\Debug\Win_LabN2.ilk" /NOLOGO /LIBPATH:"C:\Nix_LabN2\packages\libxml2-vc140-static-32_64.2.9.4.1\build\native\..\..\lib\native\libs\x64\static\Debug" /LIBPATH:"C:\Nix_LabN2\Win_LabN1\\..\Nix_LabN1\libantlr3c-3.4\x64\Release" libxml2.lib antlr3c.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Nix_LabN2\x64\Debug\Win_LabN2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Nix_LabN2\x64\Debug\Win_LabN2.lib" /MACHINE:X64 x64\Debug\Array.obj
          x64\Debug\ast.obj
+         x64\Debug\cfg.obj
          x64\Debug\custom_langLexer.obj
          x64\Debug\custom_langParser.obj
+         x64\Debug\FlowGraphBuilder.obj
          x64\Debug\main.obj
          x64\Debug\myParser.obj
+         x64\Debug\ProgramUnit.obj
+         x64\Debug\SourceFile.obj
+         x64\Debug\stack.obj
          antlr3c.lib(antlr3lexer.obj) : найден .netmodule MSIL или модуль, откомпилированный с параметром /GL; перезапускается компоновка с параметром /LTCG; добавьте /LTCG в командную строку компоновки для повышения производительности компоновщика
      1>LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/LTCG"
             Создается библиотека C:\Nix_LabN2\x64\Debug\Win_LabN2.lib и объект C:\Nix_LabN2\x64\Debug\Win_LabN2.exp
@@ -49,20 +58,18 @@
 Сборка успешно завершена.
 
        "C:\Nix_LabN2\Win_LabN1\Win_LabN1.vcxproj" (целевой объект Build ) (1) ->
-       (Целевой объект PrepareForBuild) -> 
-         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Win_LabN1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-
-
-       "C:\Nix_LabN2\Win_LabN1\Win_LabN1.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект ClCompile) -> 
-         C:\Nix_LabN2\Nix_LabN1\src\custom_langLexer.c(233,1): warning C4005: CUSTOM: изменение макроопределения
-         C:\Nix_LabN2\Nix_LabN1\src\custom_langLexer.c(3041,15): warning C4047: =: "ANTLR3_UINT32" отличается по уровням косвенного обращения от "void *"
-         C:\Nix_LabN2\Nix_LabN1\src\custom_langParser.c(11201,7): warning C4091:  : пропускается слева от "void", когда ни одна переменная не объявлена
-         C:\Nix_LabN2\Nix_LabN1\src\myParser.c(8,38): warning C4267: функция: преобразование из "size_t" в "ANTLR3_UINT32"; возможна потеря данных
-         C:\Nix_LabN2\Nix_LabN1\src\myParser.c(91,41): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-         C:\Nix_LabN2\Nix_LabN1\src\ast.c(79): warning C4716: dfs: должна возвращать значение
-         C:\Nix_LabN2\Nix_LabN1\src\Array.c(63): warning C4716: pushBack: должна возвращать значение
-         C:\Nix_LabN2\Nix_LabN1\src\Array.c(77): warning C4716: buildArray: должна возвращать значение
+         C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(16,2): warning C4091: typedef : пропускается слева от "BuiltIn", когда ни одна переменная не объявлена
+         C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(22,2): warning C4091: typedef : пропускается слева от "Type", когда ни одна переменная не объявлена
+         C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(27,2): warning C4091: typedef : пропускается слева от "CustomType", когда ни одна переменная не объявлена
+         C:\Nix_LabN2\Nix_LabN1\src\ProgramUnit.h(37,2): warning C4091: typedef : пропускается слева от "ArrayType", когда ни одна переменная не объявлена
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(42,15): warning C4456: объявление "i" скрывает предыдущее локальное объявление
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(50,9): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(155,41): warning C4047: функция: "CfgNode *" отличается по уровням косвенного обращения от "CfgNode **"
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(155,41): warning C4024: handleBreakStatement: различные типы для формального и фактического параметров 2
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(240,42): warning C4130: ==: логическая операция с адресом строковой константы
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(254,68): warning C4028: формальный параметр 2 отличается от объявления
+         C:\Nix_LabN2\Nix_LabN1\src\FlowGraphBuilder.c(168): warning C4715: handleStatement: значение возвращается не при всех путях выполнения
 
 
        "C:\Nix_LabN2\Win_LabN1\Win_LabN1.vcxproj" (целевой объект Build ) (1) ->
@@ -71,7 +78,7 @@
          LINK : warning LNK4098: библиотека по умолчанию "LIBCMTD" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
          LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
 
-    Предупреждений: 12
+    Предупреждений: 14
     Ошибок: 0
 
-Прошло времени 00:00:02.09
+Прошло времени 00:00:01.11

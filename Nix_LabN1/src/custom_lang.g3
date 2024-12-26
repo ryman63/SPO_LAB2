@@ -23,11 +23,10 @@ FUNC_DEF: 'funcDef';
 IF_STATEMENT: 'if';
 LOOP_STATEMENT: 'loop';
 REPEAT_STATEMENT: 'repeat';
-RETURN_STATEMENT: 'return';
 BREAK_STATEMENT: 'break';
 EXPRESSION_STATEMENT: 'expression';
-ASSIGNMENT_EXPR: 'assignment';
 BLOCK_STATEMENT: 'block';
+ASSIGNMENT_EXPR: 'assignment';
 BINARY_EXPR: 'binary';
 UNARY_EXPR: 'unary';
 BRACES_EXPR: 'braces';
@@ -145,7 +144,7 @@ expressionStatement
     ;
 
 blockStatement
-    : ('begin' | '{') (basicStatement | sourceItem)* ('end' | '}')
+    : ('begin' | '{')! (basicStatement | sourceItem)* ('end' | '}')!
     ;
 
 argument_expression_list

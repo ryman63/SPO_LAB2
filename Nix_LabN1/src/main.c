@@ -1,41 +1,31 @@
+#include "FlowGraphBuilder.h"
 #include <stdio.h>
-#include "myParser.h"
+
 
 int string_exists(const char* str) {
-	return str && str[0] != '\0'; // ѕровер€ем, что указатель не NULL и строка не пуста€
+	return str && str[0] != '\0';
 }
 
 int main(int argc, char* argv[]) {
-	//#ifdef _WIN32
-	//	freopen("NUL", "w", stderr);
-	//#else
-	//	freopen("/dev/null", "w", stderr);
-	//#endif
+	#ifdef _WIN32
+		freopen_s(stderr, "NUL", "w", stderr);
+	#else
+		freopen("/dev/null", "w", stderr);
+	#endif
 
-	char* inputFilePath = argv[1];
-	char* outputFilePath = argv[2];
-	
-	if (!string_exists(inputFilePath) || !string_exists(outputFilePath)) {
-		printf("invalid args");
-		return -1;
+	Array* files = buildArray(sizeof(SourceFile), 1);
+
+	for (size_t i = 0; i < argc; i++) {
+		if (i == 0 || i == argc - 1) continue;
+		if(string_exists(argv[i]))
+			pushBack(files, GetSrcFile(argv[i]));
+		else
+			printf(strcat_s("invalid arg ", strlen(argv[i]), argv[i]));
 	}
 
-	char* buffErrors = malloc(sizeof(char) * 1024);
-	buffErrors[0] = '\0';
-	
-	AstNode* root = parseCustomLang(inputFilePath, buffErrors);
+	analysis(files, argv[argc - 1]);
 
-	//printAst(root, 0);
-
-	if(strlen(buffErrors) > 0)
-		printf(buffErrors);
-
-	int generateResult = generateDGML(root, outputFilePath);
-
-	if (generateResult >= 0) printf("DGML file succesfully generated\n");
-	else printf("DGML file generation error\n");
-
-	freeAst(&root);
+	freeArray(&files);
 
 	system("pause");
 

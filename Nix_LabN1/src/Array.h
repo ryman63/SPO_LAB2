@@ -26,3 +26,4 @@ void resizeArray(Array* array);
 void* getItem(Array* arr, size_t index);
 
 void freeArray(Array** arr);
+

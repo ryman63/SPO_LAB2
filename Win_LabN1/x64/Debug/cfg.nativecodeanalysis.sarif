@@ -1,0 +1,307 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"createNode\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 2,
+                  "endLine": 6,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "createCfgNode",
+                  "decoratedName": "createCfgNode",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 4,
+                            "startColumn": 11
+                          }
+                        },
+                        "message": {
+                          "text": "\"createNode\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "\"createNode\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33139.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "8d5cf9078200193bfb127a4c2e7b5be68174ccb04c77eac686f654bce6f571be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/src/cfg.h"
+          },
+          "hashes": {
+            "sha-256": "b0dcb064f47cfb332978e20a1fd79290f97cadcf864d1a7b6a9fba1be2890f4e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/src/array.h"
+          },
+          "hashes": {
+            "sha-256": "7ca5c50a1ab44d1776ca6c0f4b6cb9b82939a789340505faecf88ea617a21bdf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/src/ast.h"
+          },
+          "hashes": {
+            "sha-256": "248c34b54b6beb64a2710b8ce62d36eeda132745472c1d7652df17731fb8c7eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/tree.h"
+          },
+          "hashes": {
+            "sha-256": "4e862a407479b297cff35b0d4fc2d9f70ac3d18e90049c6d96e204fc25f513e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlversion.h"
+          },
+          "hashes": {
+            "sha-256": "87d457298e5c87d3f6c7e2aaee9bde7d30f077138f8168a4739062b2868b7ae6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlexports.h"
+          },
+          "hashes": {
+            "sha-256": "4483df67b5ef4229a41b60e2bb5f06b66d4e7b33d31629d7673dd3a01901e28c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlstring.h"
+          },
+          "hashes": {
+            "sha-256": "ffdc82b2e779e75def391a066c29ea060d6823504423ae242d53fb2652d5c180"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlregexp.h"
+          },
+          "hashes": {
+            "sha-256": "710e5763924e28e9ce49034dd1a18e64b34c33b2cd9e4bdddf4ff9fc4af4a409"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/dict.h"
+          },
+          "hashes": {
+            "sha-256": "d5c68f7b7929929f8aaafac177668bce7bb396d048cec969078d8c47720d5ee2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlmemory.h"
+          },
+          "hashes": {
+            "sha-256": "5e2edbc467e5d137a6482300f007fda59b3376720fd5410b2bce763697a29340"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/threads.h"
+          },
+          "hashes": {
+            "sha-256": "cdc861d7e39ac17d1724e800113a96b3ae782d6e0a15b465172feb57ff503447"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/globals.h"
+          },
+          "hashes": {
+            "sha-256": "b034ba3e8d0d9ef7c6c7481ac25e50b0ae9ad6156ed48b25d9a8f98476310476"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/parser.h"
+          },
+          "hashes": {
+            "sha-256": "4f57bbef1ca0cb75e5a55662a1aa93549e657e3df7d043ac50b2d1aba89b606a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/hash.h"
+          },
+          "hashes": {
+            "sha-256": "db345e7916f04aa60c7614309c8a4855349042db485529c217e78b03ce62e262"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/valid.h"
+          },
+          "hashes": {
+            "sha-256": "48626d12b9ddebe3e0bd4ec8439593f9d6fbb6a101c04288eb764d649f019221"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlerror.h"
+          },
+          "hashes": {
+            "sha-256": "cb1916904f6678ee58f7ea37b67d1093229e1f62bb922838553931b56adfd4fd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/list.h"
+          },
+          "hashes": {
+            "sha-256": "67a7066c751a32be0cb0d9afd940219a41b9a2ca790d12f20839cd78f3d9ad4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlautomata.h"
+          },
+          "hashes": {
+            "sha-256": "5d13007461d3f5b7ad1500f0fd870ef789e82b6e495e1b4cf02d9c72983add9b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/entities.h"
+          },
+          "hashes": {
+            "sha-256": "cef73b1f9595079d6c8b2fd6db6ca92c7e5f8a9d884d7fd0dcca14c3101df35a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/encoding.h"
+          },
+          "hashes": {
+            "sha-256": "bcc8b2642ab683b0dbcca0334dfb6dae65167fb7e4ae0c4db8a319bea84ab614"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xmlio.h"
+          },
+          "hashes": {
+            "sha-256": "017efe6eb245af537d9d51af3e955854d5c09194769b0c1f6c14f87a4551b179"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/sax.h"
+          },
+          "hashes": {
+            "sha-256": "7ebd478d350a640927d2b7b688de5f50662aeac95551cbbdb52b3e61bb268a46"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/xlink.h"
+          },
+          "hashes": {
+            "sha-256": "276d260b71456d971d0f41f81804e728d46e9d3181fff692bdfe6b18c12e0ad9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/packages/libxml2-vc140-static-32_64.2.9.4.1/lib/native/include/libxml/sax2.h"
+          },
+          "hashes": {
+            "sha-256": "f0b80f8cce626e114111311983a649f2336222243bb4a259a592570e8ed3a08f"
+          }
+        }
+      ]
+    }
+  ]
+}

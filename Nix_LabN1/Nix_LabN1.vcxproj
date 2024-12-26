@@ -230,17 +230,24 @@
     <ClInclude Include="src\cfg.h" />
     <ClInclude Include="src\custom_langLexer.h" />
     <ClInclude Include="src\custom_langParser.h" />
+    <ClInclude Include="src\FlowGraphBuilder.h" />
     <ClInclude Include="src\myParser.h" />
     <ClInclude Include="src\ProgramUnit.h" />
     <ClInclude Include="src\SourceFile.h" />
+    <ClInclude Include="src\stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Array.c" />
     <ClCompile Include="src\ast.c" />
+    <ClCompile Include="src\cfg.c" />
     <ClCompile Include="src\custom_langLexer.c" />
     <ClCompile Include="src\custom_langParser.c" />
+    <ClCompile Include="src\FlowGraphBuilder.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\myParser.c" />
+    <ClCompile Include="src\ProgramUnit.c" />
+    <ClCompile Include="src\SourceFile.c" />
+    <ClCompile Include="src\stack.c" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libantlr3c-3.4\.libs\libantlr3c.a" />

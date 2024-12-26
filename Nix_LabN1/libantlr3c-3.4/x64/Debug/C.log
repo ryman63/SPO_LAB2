@@ -1,6 +1,11 @@
-﻿Сборка начата 28.11.2024 2:07:14.
-Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" в узле 2 (целевые объекты Build).
-     1>PrepareForBuild:
+﻿Сборка начата 23.12.2024 15:49:39.
+Уровень детализации журнала: Normal.     1>Проект "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>_PrepareForClean:
+         Файл "x64\Debug\C.tlog\C.lastbuildstate" удаляется.
+       CoreClean:
+         Файл "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\x64\Debug\C.lib.lastcodeanalysissucceeded" удаляется.
+         Файл "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\x64\Debug\NativeCodeAnalysis.read.1.tlog" удаляется.
+       PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
          Создание "x64\Debug\C.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
@@ -62,24 +67,22 @@
          C.vcxproj -> C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\x64\Debug\C.lib
        BscMake:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\bscmake.exe /nologo /o"x64\Debug\C.bsc" x64\Debug\antlr3baserecognizer.sbr x64\Debug\antlr3basetree.sbr x64\Debug\antlr3basetreeadaptor.sbr x64\Debug\antlr3bitset.sbr x64\Debug\antlr3collections.sbr x64\Debug\antlr3commontoken.sbr x64\Debug\antlr3commontree.sbr x64\Debug\antlr3commontreeadaptor.sbr x64\Debug\antlr3commontreenodestream.sbr x64\Debug\antlr3convertutf.sbr x64\Debug\antlr3cyclicdfa.sbr x64\Debug\antlr3debughandlers.sbr x64\Debug\antlr3encodings.sbr x64\Debug\antlr3exception.sbr x64\Debug\antlr3filestream.sbr x64\Debug\antlr3inputstream.sbr x64\Debug\antlr3intstream.sbr x64\Debug\antlr3lexer.sbr x64\Debug\antlr3parser.sbr x64\Debug\antlr3rewritestreams.sbr x64\Debug\antlr3string.sbr x64\Debug\antlr3tokenstream.sbr x64\Debug\antlr3treeparser.sbr
-       TlogCleanup:
-         Следующие элементы будут удалены из tlogs, так как они были удалены из проекта или сборки: C:\antlr3\Nix_LabN1\Nix_LabN1\libantlr3c-3.4\src\antlr3baserecognizer.c.
        FinalizeBuildStatus:
          Файл "x64\Debug\C.tlog\unsuccessfulbuild" удаляется.
          Обращение к "x64\Debug\C.tlog\C.lastbuildstate".
-     1>Сборка проекта "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" завершена (целевые объекты Build).
+     1>Сборка проекта "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" завершена (целевые объекты Rebuild).
 
 Сборка успешно завершена.
 
-       "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" (целевой объект Build ) (1) ->
+       "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" (целевой объект Rebuild ) (1) ->
        (Целевой объект DoLibOutputFilesMatch) -> 
          C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1554,5): warning MSB8012: TargetPath(C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\x64\Debug\C.lib) не соответствует значению свойства выходного файла (C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\x64\Debug\antlr3cd.lib) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
 
 
-       "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" (целевой объект Build ) (1) ->
+       "C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\C.vcxproj" (целевой объект Rebuild ) (1) ->
          C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1556,5): warning MSB8012: TargetName(C) не соответствует значению свойства выходного файла (antlr3cd) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
 
     Предупреждений: 2
     Ошибок: 0
 
-Прошло времени 00:00:07.08
+Прошло времени 00:00:06.57
