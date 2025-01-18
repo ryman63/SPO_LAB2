@@ -1,19 +1,5 @@
 #include "FlowGraphBuilder.h"
 
-char* strCpy(char* src) {
-	size_t tokenLen = strlen(src);
-	char* tokenCopy = malloc(tokenLen + 1);
-
-	#ifdef _WIN32
-		strcpy_s(tokenCopy, tokenLen + 1, src);
-	#else
-		strcpy(tokenCopy, src);
-	#endif
-
-	tokenCopy[tokenLen] = '\0';
-	return tokenCopy;
-}
-
 void analysis(Array* srcFiles, char* outputDir) {
 	for (size_t i = 0; i < srcFiles->size; i++) {
 		char* buffErrors = malloc(sizeof(char) * 1024);
@@ -49,11 +35,9 @@ void analysis(Array* srcFiles, char* outputDir) {
 			char* buff = malloc(sizeof(char) * 8);
 			itoa(i, buff, 10);
 			generateCfgDGML(programUnit.cfg, strcat(buff, ".dgml"));
-
+			TraverseCfg(programUnit.cfg, generateOpTreeDGML);
 			pushBack(programUnitsStorage, &programUnit);
 		}
-
-
 
 		if (strlen(buffErrors) > 0)
 			printf(buffErrors);
@@ -104,10 +88,9 @@ CfgNode* handleFunctionBody(AstNode* functionBodyAst) {
 		return NULL;
 	
 
-	CfgNode* entryNode = createCfgNode("function entry");
+	CfgNode* entryNode = createCfgNode("function entry", functionBodyAst->line);
 	CfgNode* currentNode = entryNode;
 	CfgNode* lastCfgNode = entryNode;
-
 
 	for (size_t i = 1; i < functionBodyAst->children->size; i++) {
 		AstNode* statement = getItem(functionBodyAst->children, i);
@@ -121,7 +104,7 @@ CfgNode* handleFunctionBody(AstNode* functionBodyAst) {
 
 	lastCfgNode = currentNode;
 
-	CfgNode* exitNode = createCfgNode("function exit");
+	CfgNode* exitNode = createCfgNode("function exit", -1);
 	lastCfgNode->condJump = exitNode;
 
 	freeArray(&breakTargets);
@@ -155,7 +138,7 @@ CfgNode* handleStatement(AstNode* rootStatementAst, CfgNode** lastCfgNode) {
 		handleBreakStatement(typeOfStatement, lastCfgNode);
 	}
 	else if (!strcmp(typeOfStatement->token, "REPEAT_STATEMENT")) {
-
+		handleRepeatStatement(typeOfStatement, lastCfgNode);
 	}
 	else if (!strcmp(typeOfStatement->token, "EXPRESSION_STATEMENT")) {
 		handleExpressionStatement(typeOfStatement, lastCfgNode);
@@ -168,7 +151,7 @@ CfgNode* handleStatement(AstNode* rootStatementAst, CfgNode** lastCfgNode) {
 }
 
 CfgNode* handleBlockStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
-	CfgNode* newBlock = createCfgNode("block statement");
+	CfgNode* newBlock = createCfgNode("block statement", statementNodeAst->line);
 	CfgNode* currentBlock = newBlock;
 	if (statementNodeAst) {
 		for (size_t i = 0; i < statementNodeAst->children->size; i++) {
@@ -190,13 +173,13 @@ CfgNode* handleBlockStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) 
 }
 
 CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
-	CfgNode* emptyBlock = createCfgNode("empty");
-	CfgNode* newBlock = createCfgNode("condition statement");
+	CfgNode* emptyBlock = createCfgNode("empty", -1);
+	CfgNode* newBlock = createCfgNode("condition statement", statementNodeAst->line);
 
 	Array* children = statementNodeAst->children;
 
 	AstNode* exprNode = getItem(children, 0);
-	newBlock->opTree = handleExpression(exprNode);
+	newBlock->opTree = handleExpression(getItem(exprNode->children, 0));
 
 	if (children->size == 2) {
 		AstNode* condStatement = getItem(children, 1);
@@ -223,13 +206,13 @@ CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNo
 }
 
 CfgNode* handleLoopStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
-	CfgNode* newBlock = createCfgNode("loop statement");
-	CfgNode* exitBlock = createCfgNode("exit loop");
+	CfgNode* newBlock = createCfgNode("loop statement", statementNodeAst->line);
+	CfgNode* exitBlock = createCfgNode("exit loop", -1);
 	CfgNode* currentBlock = newBlock;
 	Array* children = statementNodeAst->children;
 
 	AstNode* exprNode = getItem(children, 0);
-	newBlock->opTree = handleExpression(exprNode);
+	newBlock->opTree = handleExpression(getItem(exprNode->children, 0));
 	pushBack(breakTargets, exitBlock);
 	if (children->size > 1) {
 		for (size_t i = 1; i < children->size; i++) {
@@ -242,17 +225,26 @@ CfgNode* handleLoopStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
 			}
 		}
 	}
-	
 
-	
+	newBlock->uncondJump = currentBlock;
 
 	*lastCfgNode = currentBlock;
 
 	return newBlock;
 }
 
+CfgNode* handleRepeatStatement(AstNode* typeOfStatement, CfgNode** lastCfgNode) {
+
+}
+
 CfgNode* handleBreakStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
-	CfgNode* newBlock = createCfgNode("break statement");
+	CfgNode* newBlock = createCfgNode("break statement", statementNodeAst->line);
+
+	if (breakTargets->size == 0) {
+		// обработка ошибки
+
+		return NULL;
+	}
 
 	CfgNode* result = popBack(breakTargets);
 	newBlock->condJump = result;
@@ -262,9 +254,11 @@ CfgNode* handleBreakStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) 
 }
 
 CfgNode* handleExpressionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
-	CfgNode* newBlock = createCfgNode("expression statement");
+	CfgNode* newBlock = createCfgNode("expression statement", statementNodeAst->line);
 
-	newBlock->opTree = handleExpression(getItem(statementNodeAst->children, 0));
+	AstNode* expressionStatementAst = getItem(statementNodeAst->children, 0);
+
+	newBlock->opTree = handleExpression(getItem(expressionStatementAst->children, 0));
 	
 	*lastCfgNode = newBlock;
 
@@ -273,5 +267,112 @@ CfgNode* handleExpressionStatement(AstNode* statementNodeAst, CfgNode** lastCfgN
 
 
 OpNode* handleExpression(AstNode* exprNode) {
+
+	char* firstToken = exprNode->token;
+
+	if (!strcmp(firstToken, "=")) {
+		return handleAssignment(exprNode);
+	}
+	else if (!strcmp(firstToken, "+")) {
+		return handleBinaryOp(exprNode);
+	}
+	else if (!strcmp(firstToken, ">")) {
+		return handleBinaryOp(exprNode);
+	}
+	else if (!strcmp(firstToken, "<")) {
+		return handleBinaryOp(exprNode);
+	}
+	else if (!strcmp(firstToken, "*")) {
+		return handleBinaryOp(exprNode);
+	}
+	else if (!strcmp(firstToken, "/")) {
+		return handleBinaryOp(exprNode);
+	}
+	else if(!strcmp(firstToken, "LITERAL_EXPR")) {
+		return handleLiteralOrVarOp(getItem(exprNode->children, 0));
+	}
+	else if (!strcmp(firstToken, "CALL_EXPR")) {
+		return handleCallOp(getItem(exprNode->children, 0));
+	}
+	else {
+		return handleLiteralOrVarOp(exprNode);
+	}
+	
 	return NULL;
+}
+
+OpNode* handleAssignment(AstNode* opNodeAst) {
+	AstNode* lValue = getItem(opNodeAst->children, 0);
+	AstNode* rValue = getItem(opNodeAst->children, 1);
+
+	OpNode* resultOp = createOpNode("assignment");
+
+	if (lValue->token == "SLICE_EXPR") {
+		return createOpNode("slice");
+	} 
+	else {
+		OpNode* writeOp = createOpNode("write");
+		OpNode* valueOp = createOpNode(strCpy(lValue->token));
+		pushBack(writeOp->args, valueOp);
+		pushBack(resultOp->args, writeOp);
+	}
+
+	OpNode* rValueOp = handleExpression(rValue);
+
+	if(rValueOp)
+		pushBack(resultOp->args, rValueOp);
+	else
+	{
+		// обработка ошибки
+
+		return NULL;
+	}
+
+	return resultOp;
+}
+
+OpNode* handleBinaryOp(AstNode* opNodeAst) {
+	OpNode* resultOp = createOpNode(strCpy(opNodeAst->token));
+
+	AstNode* lValue = getItem(opNodeAst->children, 0);
+	AstNode* rValue = getItem(opNodeAst->children, 1);
+
+	OpNode* lValueOp = handleExpression(lValue);
+	OpNode* rValueOp = handleExpression(rValue);
+	
+	if(lValueOp)
+		pushBack(resultOp->args, lValueOp);
+	if(rValueOp)
+		pushBack(resultOp->args, rValueOp);
+
+	return resultOp;
+}
+
+OpNode* handleLiteralOrVarOp(AstNode* varOrLit) {
+	OpNode* resultOp = createOpNode("read");
+
+	OpNode* varOrLitOp = createOpNode(strCpy(varOrLit->token));
+
+	pushBack(resultOp->args, varOrLitOp);
+
+	return resultOp;
+}
+
+OpNode* handleCallOp(AstNode* opNodeAst) {
+	OpNode* resultOp = createOpNode("call");
+
+	AstNode* funcNameAst = getItem(opNodeAst->children, 1);
+
+	OpNode* funcNameOp = createOpNode(strCpy(funcNameAst));
+	if(funcNameOp)
+		pushBack(resultOp->args, funcNameOp);
+
+	AstNode* funcArgsAst = getItem(opNodeAst->children, 0);
+	for (size_t i = 0; i < funcArgsAst->children->size; i++) {
+		AstNode* currentValueAst = getItem(funcArgsAst->children, i);
+		OpNode* currentValueOp = handleExpression(currentValueAst);
+		if(currentValueOp)
+			pushBack(resultOp->args, currentValueOp);
+	}
+	return resultOp;
 }

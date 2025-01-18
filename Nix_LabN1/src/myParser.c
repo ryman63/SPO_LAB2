@@ -4,7 +4,7 @@ void fillAst(pANTLR3_BASE_TREE tree, AstNode* root) {
     AstNode* node = insert
         (root, 
         (const char*) tree->getText(tree)->chars, 
-        (int)tree->getLine);
+        (int)tree->getLine(tree));
     size_t childCount = tree->getChildCount(tree);
 
     for (size_t i = 0; i < childCount; i++) {

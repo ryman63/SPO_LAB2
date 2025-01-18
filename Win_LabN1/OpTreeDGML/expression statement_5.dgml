@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="10" Label="assignment"/>
+    <Node Id="11" Label="write"/>
+    <Node Id="12" Label="SLICE_EXPR"/>
+    <Node Id="13" Label="*"/>
+    <Node Id="14" Label="read"/>
+    <Node Id="15" Label="SLICE_EXPR"/>
+    <Node Id="16" Label="read"/>
+    <Node Id="17" Label="2"/>
+  </Nodes>
+  <Links>
+    <Link Source="10" Target="11"/>
+    <Link Source="11" Target="12"/>
+    <Link Source="10" Target="13"/>
+    <Link Source="13" Target="14"/>
+    <Link Source="14" Target="15"/>
+    <Link Source="13" Target="16"/>
+    <Link Source="16" Target="17"/>
+  </Links>
+</DirectedGraph>

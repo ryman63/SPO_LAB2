@@ -5,8 +5,6 @@
 
 Array* breakTargets;
 
-char* strCpy(char* src);
-
 void analysis(Array* srcFiles, char* outputDir);
 
 TypeRef* buildTypeRef(AstNode* rootTypeRefAst);
@@ -23,6 +21,8 @@ CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNo
 
 CfgNode* handleLoopStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode);
 
+CfgNode* handleRepeatStatement(AstNode* typeOfStatement, CfgNode** lastCfgNode);
+
 CfgNode* handleExpressionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode);
 
 CfgNode* handleBreakStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode);
@@ -32,3 +32,11 @@ OpNode* handleExpression(AstNode* exprNode);
 //CfgNode* handleFunction(AstNode* functionAst);
 
 CfgNode* handleFunctionBody(AstNode* functionBodyAst);
+
+OpNode* handleAssignment(AstNode* opNodeAst);
+
+OpNode* handleBinaryOp(AstNode* opNodeAst);
+
+OpNode* handleLiteralOrVarOp(AstNode* varOrLit);
+
+OpNode* handleCallOp(AstNode* opNodeAst);
