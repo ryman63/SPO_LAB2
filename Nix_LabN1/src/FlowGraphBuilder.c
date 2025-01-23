@@ -174,7 +174,8 @@ CfgNode* handleBlockStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) 
 CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
 	CfgNode* emptyBlock = createCfgNode("empty", -1);
 	CfgNode* newBlock = createCfgNode("condition statement", statementNodeAst->line);
-
+	CfgNode* condLastBlock = NULL;
+	CfgNode* unCondLastBlock = NULL;
 	Array* children = statementNodeAst->children;
 
 	AstNode* exprNode = getItem(children, 0);
@@ -183,12 +184,15 @@ CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNo
 	if (children->size == 2) {
 		AstNode* condStatement = getItem(children, 1);
 		newBlock->condJump = handleStatement(condStatement, lastCfgNode);
+		condLastBlock = *lastCfgNode;
 	}
 	else if (children->size == 3) {
 		AstNode* condStatement = getItem(children, 1);
 		AstNode* uncondStatement = getItem(children, 2);
 		newBlock->condJump = handleStatement(condStatement, lastCfgNode);
+		condLastBlock = *lastCfgNode;
 		newBlock->uncondJump = handleStatement(uncondStatement, lastCfgNode);
+		unCondLastBlock = *lastCfgNode;
 	}
 	else {
 		// обработка ошибки
@@ -196,8 +200,9 @@ CfgNode* handleConditionStatement(AstNode* statementNodeAst, CfgNode** lastCfgNo
 		return NULL;
 	}
 
-	newBlock->condJump->condJump = emptyBlock;
-	newBlock->uncondJump->condJump = emptyBlock;
+	condLastBlock->condJump = emptyBlock;
+	if(children->size == 3)
+		unCondLastBlock->condJump = emptyBlock;
 
 	*lastCfgNode = emptyBlock;
 
@@ -391,13 +396,13 @@ OpNode* handleLiteralOrVarOp(AstNode* varOrLit) {
 OpNode* handleCallOp(AstNode* opNodeAst) {
 	OpNode* resultOp = createOpNode("call");
 
-	AstNode* funcNameAst = getItem(opNodeAst->children, 1);
+	AstNode* funcNameAst = getItem(opNodeAst->children, 0);
 
 	OpNode* funcNameOp = createOpNode(strCpy(funcNameAst->token));
 	if(funcNameOp)
 		pushBack(resultOp->args, funcNameOp);
 
-	for (size_t i = 0; i < opNodeAst->children->size - 1; i++) {
+	for (size_t i = 1; i < opNodeAst->children->size; i++) {
 		AstNode* currentValueAst = getItem(opNodeAst->children, i);
 		OpNode* currentValueOp = handleExpression(currentValueAst);
 		if(currentValueOp)

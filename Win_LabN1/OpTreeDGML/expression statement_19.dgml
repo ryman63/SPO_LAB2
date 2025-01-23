@@ -1,72 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="59" Label="assignment"/>
-    <Node Id="60" Label="write"/>
-    <Node Id="61" Label="index"/>
-    <Node Id="62" Label="array"/>
-    <Node Id="63" Label="index"/>
-    <Node Id="64" Label="array"/>
-    <Node Id="65" Label="matrix"/>
-    <Node Id="66" Label="index"/>
-    <Node Id="67" Label="i"/>
-    <Node Id="68" Label="j"/>
-    <Node Id="69" Label="k"/>
-    <Node Id="66" Label="index"/>
-    <Node Id="67" Label="i"/>
-    <Node Id="68" Label="j"/>
-    <Node Id="69" Label="k"/>
-    <Node Id="66" Label="index"/>
-    <Node Id="67" Label="i"/>
-    <Node Id="68" Label="j"/>
-    <Node Id="69" Label="k"/>
-    <Node Id="70" Label="index"/>
-    <Node Id="71" Label="l"/>
-    <Node Id="72" Label="o"/>
-    <Node Id="70" Label="index"/>
-    <Node Id="71" Label="l"/>
-    <Node Id="72" Label="o"/>
-    <Node Id="73" Label="+"/>
-    <Node Id="74" Label="*"/>
-    <Node Id="75" Label="read"/>
-    <Node Id="76" Label="i"/>
-    <Node Id="77" Label="read"/>
-    <Node Id="78" Label="j"/>
-    <Node Id="79" Label="read"/>
-    <Node Id="80" Label="1"/>
+    <Node Id="71" Label="read"/>
+    <Node Id="72" Label="++"/>
   </Nodes>
   <Links>
-    <Link Source="59" Target="60"/>
-    <Link Source="60" Target="61"/>
-    <Link Source="61" Target="62"/>
-    <Link Source="62" Target="63"/>
-    <Link Source="63" Target="64"/>
-    <Link Source="64" Target="65"/>
-    <Link Source="63" Target="66"/>
-    <Link Source="66" Target="67"/>
-    <Link Source="66" Target="68"/>
-    <Link Source="66" Target="69"/>
-    <Link Source="63" Target="66"/>
-    <Link Source="66" Target="67"/>
-    <Link Source="66" Target="68"/>
-    <Link Source="66" Target="69"/>
-    <Link Source="63" Target="66"/>
-    <Link Source="66" Target="67"/>
-    <Link Source="66" Target="68"/>
-    <Link Source="66" Target="69"/>
-    <Link Source="61" Target="70"/>
-    <Link Source="70" Target="71"/>
-    <Link Source="70" Target="72"/>
-    <Link Source="61" Target="70"/>
-    <Link Source="70" Target="71"/>
-    <Link Source="70" Target="72"/>
-    <Link Source="59" Target="73"/>
-    <Link Source="73" Target="74"/>
-    <Link Source="74" Target="75"/>
-    <Link Source="75" Target="76"/>
-    <Link Source="74" Target="77"/>
-    <Link Source="77" Target="78"/>
-    <Link Source="73" Target="79"/>
-    <Link Source="79" Target="80"/>
+    <Link Source="71" Target="72"/>
   </Links>
 </DirectedGraph>

@@ -7,6 +7,8 @@
     <Node Id="13" Label="expression statement"/>
     <Node Id="14" Label="break statement"/>
     <Node Id="12" Label="exit loop"/>
+    <Node Id="15" Label="expression statement"/>
+    <Node Id="16" Label="function exit"/>
   </Nodes>
   <Links>
     <Link Source="9" Target="10"/>
@@ -14,6 +16,8 @@
     <Link Source="11" Target="13"/>
     <Link Source="13" Target="14"/>
     <Link Source="14" Target="12"/>
+    <Link Source="12" Target="15"/>
+    <Link Source="15" Target="16"/>
     <Link Source="11" Target="12"/>
   </Links>
 </DirectedGraph>

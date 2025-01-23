@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="109" Label="call"/>
+    <Node Id="110" Label="printf"/>
+    <Node Id="111" Label="read"/>
+    <Node Id="112" Label="&quot;1\n&quot;"/>
+  </Nodes>
+  <Links>
+    <Link Source="109" Target="110"/>
+    <Link Source="109" Target="111"/>
+    <Link Source="111" Target="112"/>
+  </Links>
+</DirectedGraph>

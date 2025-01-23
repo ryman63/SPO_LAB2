@@ -7,11 +7,11 @@ int string_exists(const char* str) {
 }
 
 int main(int argc, char* argv[]) {
-	#ifdef _WIN32
-		freopen_s(stderr, "NUL", "w", stderr);
-	#else
-		freopen("/dev/null", "w", stderr);
-	#endif
+	//#ifdef _WIN32
+	//	freopen_s(stderr, "NUL", "w", stderr);
+	//#else
+	//	freopen("/dev/null", "w", stderr);
+	//#endif
 
 	Array* files = buildArray(sizeof(SourceFile), 1);
 

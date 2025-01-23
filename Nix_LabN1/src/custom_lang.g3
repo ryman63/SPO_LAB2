@@ -153,7 +153,7 @@ blockStatement
     ;
 
 argument_expression_list
-    :   unary_expression (',' unary_expression)* -> ^(CALL_EXPR unary_expression unary_expression*) 
+    :   (unary_expression (',' unary_expression)*)*
     ;
 
 additive_expression
@@ -171,10 +171,10 @@ unary_expression
     ;
 
 postfix_expression
-    :   primary_expression
+    : primary_expression '(' (argument_expression_list) ')' -> ^(CALL_EXPR primary_expression argument_expression_list)
+    |   primary_expression
 		(     slice^
 			| ('(' ')')!
-			| '('! argument_expression_list^ ')'!
 			| '++'
 			| '--'
         )*
