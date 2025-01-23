@@ -40,3 +40,5 @@ OpNode* handleBinaryOp(AstNode* opNodeAst);
 OpNode* handleLiteralOrVarOp(AstNode* varOrLit);
 
 OpNode* handleCallOp(AstNode* opNodeAst);
+
+OpNode* handleSliceOp(AstNode* opNodeAst);

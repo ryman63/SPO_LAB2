@@ -86,7 +86,6 @@ CfgNode* handleFunctionBody(AstNode* functionBodyAst) {
 
 	if (!functionBodyAst)
 		return NULL;
-	
 
 	CfgNode* entryNode = createCfgNode("function entry", functionBodyAst->line);
 	CfgNode* currentNode = entryNode;
@@ -102,7 +101,7 @@ CfgNode* handleFunctionBody(AstNode* functionBodyAst) {
 		}
 	}
 
-	lastCfgNode = currentNode;
+	//lastCfgNode = currentNode;
 
 	CfgNode* exitNode = createCfgNode("function exit", -1);
 	lastCfgNode->condJump = exitNode;
@@ -225,16 +224,44 @@ CfgNode* handleLoopStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
 			}
 		}
 	}
+	if (strcmp(currentBlock->label, "exit loop"))
+		currentBlock->condJump = exitBlock;
 
-	newBlock->uncondJump = currentBlock;
+	newBlock->uncondJump = exitBlock;
 
-	*lastCfgNode = currentBlock;
+	*lastCfgNode = exitBlock;
 
 	return newBlock;
 }
 
 CfgNode* handleRepeatStatement(AstNode* typeOfStatement, CfgNode** lastCfgNode) {
+	CfgNode* enterBlock = createCfgNode("enter loop", -1);
+	CfgNode* newBlock = createCfgNode("repeat statement", typeOfStatement->line);
+	CfgNode* currentBlock = enterBlock;
+	Array* children = typeOfStatement->children;
 
+	AstNode* exprNode = getItem(children, 1);
+	newBlock->opTree = handleExpression(getItem(exprNode->children, 0));
+	pushBack(breakTargets, newBlock);
+	if (children->size > 1) {
+		for (size_t i = 0; i < children->size - 1; i++) {
+			AstNode* statement = getItem(children, i);
+			CfgNode* result = handleStatement(statement, lastCfgNode);
+			currentBlock->condJump = result;
+			currentBlock = *lastCfgNode;
+			if (result->label == "break statement") {
+				break;
+			}
+		}
+	}
+	
+	currentBlock->condJump = newBlock;
+
+	newBlock->uncondJump = enterBlock;
+
+	*lastCfgNode = newBlock;
+
+	return enterBlock;
 }
 
 CfgNode* handleBreakStatement(AstNode* statementNodeAst, CfgNode** lastCfgNode) {
@@ -292,7 +319,10 @@ OpNode* handleExpression(AstNode* exprNode) {
 		return handleLiteralOrVarOp(getItem(exprNode->children, 0));
 	}
 	else if (!strcmp(firstToken, "CALL_EXPR")) {
-		return handleCallOp(getItem(exprNode->children, 0));
+		return handleCallOp(exprNode);
+	}
+	else if (!strcmp(firstToken, "SLICE_EXPR")) {
+		return handleSliceOp(exprNode);
 	}
 	else {
 		return handleLiteralOrVarOp(exprNode);
@@ -306,16 +336,16 @@ OpNode* handleAssignment(AstNode* opNodeAst) {
 	AstNode* rValue = getItem(opNodeAst->children, 1);
 
 	OpNode* resultOp = createOpNode("assignment");
+	OpNode* writeOp = createOpNode("write");
 
-	if (lValue->token == "SLICE_EXPR") {
-		return createOpNode("slice");
-	} 
-	else {
-		OpNode* writeOp = createOpNode("write");
-		OpNode* valueOp = createOpNode(strCpy(lValue->token));
-		pushBack(writeOp->args, valueOp);
-		pushBack(resultOp->args, writeOp);
-	}
+	OpNode* lValueOp = NULL;
+	if (!strcmp(lValue->token, "SLICE_EXPR"))
+		lValueOp = handleSliceOp(lValue);
+	else
+		lValueOp = createOpNode(strCpy(lValue->token));
+
+	pushBack(writeOp->args, lValueOp);
+	pushBack(resultOp->args, writeOp);
 
 	OpNode* rValueOp = handleExpression(rValue);
 
@@ -363,16 +393,44 @@ OpNode* handleCallOp(AstNode* opNodeAst) {
 
 	AstNode* funcNameAst = getItem(opNodeAst->children, 1);
 
-	OpNode* funcNameOp = createOpNode(strCpy(funcNameAst));
+	OpNode* funcNameOp = createOpNode(strCpy(funcNameAst->token));
 	if(funcNameOp)
 		pushBack(resultOp->args, funcNameOp);
 
-	AstNode* funcArgsAst = getItem(opNodeAst->children, 0);
-	for (size_t i = 0; i < funcArgsAst->children->size; i++) {
-		AstNode* currentValueAst = getItem(funcArgsAst->children, i);
+	for (size_t i = 0; i < opNodeAst->children->size - 1; i++) {
+		AstNode* currentValueAst = getItem(opNodeAst->children, i);
 		OpNode* currentValueOp = handleExpression(currentValueAst);
 		if(currentValueOp)
 			pushBack(resultOp->args, currentValueOp);
 	}
+	return resultOp;
+}
+
+OpNode* handleSliceOp(AstNode* opNodeAst) {
+	OpNode* resultOp = createOpNode("index");
+	
+	AstNode* sliceNameAst = getItem(opNodeAst->children, 1);
+	AstNode* rangeListAst = getItem(opNodeAst->children, 0);
+
+	OpNode* arrayOp = createOpNode("array");
+	OpNode* identifierOp = NULL;
+	if (!strcmp(sliceNameAst->token, "SLICE_EXPR")) {
+		identifierOp = handleSliceOp(sliceNameAst);
+	}
+	else {
+		identifierOp = createOpNode(strCpy(sliceNameAst->token));
+	}
+	pushBack(resultOp->args, arrayOp);
+	pushBack(arrayOp->args, identifierOp);
+
+	OpNode* indexOp = createOpNode("index");
+	for (size_t i = 0; i < rangeListAst->children->size; i++) {
+		AstNode* currentRangeAst = getItem(rangeListAst->children, i);
+		OpNode* currentIndexOp = createOpNode(strCpy(currentRangeAst->token));
+		
+		pushBack(indexOp->args, currentIndexOp);
+		pushBack(resultOp->args, indexOp);
+	}
+
 	return resultOp;
 }

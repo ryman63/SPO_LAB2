@@ -2,33 +2,25 @@
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
     <Node Id="0" Label="function entry"/>
-    <Node Id="1" Label="block statement"/>
-    <Node Id="2" Label="loop statement"/>
+    <Node Id="1" Label="enter loop"/>
+    <Node Id="3" Label="block statement"/>
     <Node Id="5" Label="condition statement"/>
     <Node Id="6" Label="expression statement"/>
     <Node Id="4" Label="empty"/>
-    <Node Id="8" Label="expression statement"/>
-    <Node Id="9" Label="function exit"/>
+    <Node Id="2" Label="repeat statement"/>
+    <Node Id="8" Label="function exit"/>
     <Node Id="7" Label="expression statement"/>
-    <Node Id="4" Label="empty"/>
-    <Node Id="8" Label="expression statement"/>
-    <Node Id="9" Label="function exit"/>
-    <Node Id="8" Label="expression statement"/>
-    <Node Id="9" Label="function exit"/>
   </Nodes>
   <Links>
     <Link Source="0" Target="1"/>
-    <Link Source="1" Target="2"/>
-    <Link Source="2" Target="5"/>
+    <Link Source="1" Target="3"/>
+    <Link Source="3" Target="5"/>
     <Link Source="5" Target="6"/>
     <Link Source="6" Target="4"/>
-    <Link Source="4" Target="8"/>
-    <Link Source="8" Target="9"/>
+    <Link Source="4" Target="2"/>
+    <Link Source="2" Target="8"/>
+    <Link Source="2" Target="1"/>
     <Link Source="5" Target="7"/>
     <Link Source="7" Target="4"/>
-    <Link Source="4" Target="8"/>
-    <Link Source="8" Target="9"/>
-    <Link Source="2" Target="8"/>
-    <Link Source="8" Target="9"/>
   </Links>
 </DirectedGraph>

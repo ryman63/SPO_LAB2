@@ -1,0 +1,227 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33139.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/src/antlr3cyclicdfa.c"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "5ffd7f8f1bc63464dbdf8fa6dc94870ea9837f67268550ceb279499ce4a0496a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3defs.h"
+          },
+          "hashes": {
+            "sha-256": "991565fd8fdc99206c1ce5013607216f22fb83209e83b62ffbc06a65266f0ae9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3errors.h"
+          },
+          "hashes": {
+            "sha-256": "f8c5f4a2af0fdb1875e56e7b0e5fe708aa59432d27fd6313a0e04c960b509e53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3interfaces.h"
+          },
+          "hashes": {
+            "sha-256": "6b3a8f15b25aa30ab71eb783657cd1f91bc12dbe9138c98964f8563587c097d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3convertutf.h"
+          },
+          "hashes": {
+            "sha-256": "74d28be02386cf32e62f873c339e93ea5cb3de19d1787a9600d17951e55cec93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3cyclicdfa.h"
+          },
+          "hashes": {
+            "sha-256": "3531985deb00c13ce908ce13aec3ecf942b80d5fa319562b14c328bb19ab4935"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3baserecognizer.h"
+          },
+          "hashes": {
+            "sha-256": "95061141585a81da8279e911a7fcd5bf6a93ac0b21c7b9adaad3bcc69705b3f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3exception.h"
+          },
+          "hashes": {
+            "sha-256": "811aa62e7f2eea4eab08b59c0784909276b9a88a3f53cf6e8aea100dda0c9ce3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3input.h"
+          },
+          "hashes": {
+            "sha-256": "85bca0c19503448018be2c3c68e04a3fa20bea601f9974d3256261d5a70576f1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3string.h"
+          },
+          "hashes": {
+            "sha-256": "07176c48b71cae9a216dd444f3dedb193a93dd895f1f4e435a2f782895678efe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3collections.h"
+          },
+          "hashes": {
+            "sha-256": "efc122caa18134e851c01eb3746a66321ee8f67552e81ced94b60d2161f05a9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3bitset.h"
+          },
+          "hashes": {
+            "sha-256": "e35600da6d92397ef38015dd7f782188931308f5087415f6ea57c108a0e29269"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3commontoken.h"
+          },
+          "hashes": {
+            "sha-256": "932997f2fe459f3ca1ead505ed41ac4dc90c58ede4cf2b4dfe93765f1751ff68"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3intstream.h"
+          },
+          "hashes": {
+            "sha-256": "40b503a987674c1b34a42cd438438153e75b200216de29e8f3253afb38840194"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3tokenstream.h"
+          },
+          "hashes": {
+            "sha-256": "7a5d104581e2255f8d27fd896a9ba54be48ad7ac1352429d28eb5f283dd2f25e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3debugeventlistener.h"
+          },
+          "hashes": {
+            "sha-256": "406e550c624be41f5c745740a0ad22e1909a53039b92f465ed54b4e735b04e73"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3basetree.h"
+          },
+          "hashes": {
+            "sha-256": "b6652e39f17c945c830999ab66fae040f647452bc07815d1a99225235fa25a23"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3commontreenodestream.h"
+          },
+          "hashes": {
+            "sha-256": "2a7580292b8da8a07af0c6ee8048e3007f5f964a790052ecf2a0a6f531dbb470"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3commontreeadaptor.h"
+          },
+          "hashes": {
+            "sha-256": "4a469fe8ca37315892487955d46b7e376c5515bfea23ed7ea10f60c1dfd9a31f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3basetreeadaptor.h"
+          },
+          "hashes": {
+            "sha-256": "2a65db67a3ee0ca8b6cfcb60e56e118ee9d5fd216aea659baf5831ac45e61f00"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3commontree.h"
+          },
+          "hashes": {
+            "sha-256": "3143fed50b9454b6685bb9c69cddd3d60d3dbb7f0d96c71ac28bca287025b28a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3recognizersharedstate.h"
+          },
+          "hashes": {
+            "sha-256": "505ec45c92d3684f5178ea96ef50b8f68d321e74795dbb9a6bc5e4ec2a6489ef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3lexer.h"
+          },
+          "hashes": {
+            "sha-256": "5fbac134635970887926e9cd950f6ec0b0801f260fc4895d0d3b32438cbba4dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3parser.h"
+          },
+          "hashes": {
+            "sha-256": "4b39bfb61565b08d8a13ddc64abb40879e0547769ce4df0f694f09491c4e57e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3treeparser.h"
+          },
+          "hashes": {
+            "sha-256": "ad3be9f85f629aa5dc68191dd72fb3a203e26fe5f2bc4ea2fd47d07889acafc3"
+          }
+        }
+      ]
+    }
+  ]
+}

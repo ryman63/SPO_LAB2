@@ -34,7 +34,7 @@
             "uri": "file:///c:/nix_labn2/nix_labn1/src/programunit.h"
           },
           "hashes": {
-            "sha-256": "234953d8525b65c854a1c6e16695fd6444722393f3b8afeb934fe9fc328531fc"
+            "sha-256": "84e4016884231ab7c22c05beaca5437443e65a87dac6f6fa60c99040f7a65fb7"
           }
         },
         {
@@ -226,7 +226,7 @@
             "uri": "file:///c:/nix_labn2/nix_labn1/src/cfg.h"
           },
           "hashes": {
-            "sha-256": "b0dcb064f47cfb332978e20a1fd79290f97cadcf864d1a7b6a9fba1be2890f4e"
+            "sha-256": "7fd51883118a59e5d64c899bdb58a42a1820af866eec7bbc646189522f6a5f9d"
           }
         },
         {

@@ -26,7 +26,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "0c34fe06f69e1e9b5633735ff7a8f15c1080ca011b82df5f8d196beeed77c86e"
+            "sha-256": "b90ae67751bb032286b0c946b8de2c1776dcadbad92b3a142fcce94f1cccfad5"
           }
         },
         {
@@ -34,7 +34,7 @@
             "uri": "file:///c:/nix_labn2/nix_labn1/src/custom_langlexer.h"
           },
           "hashes": {
-            "sha-256": "9ee68f34938edc6523e0a2e088108b955d5bea770accfc0914f4e8225d346c46"
+            "sha-256": "d68b32c439cfa319a2804f5f69a64678d2c069d849d1cec3e394616ff6722f2f"
           }
         },
         {

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+      <FILENAME>antlr3commontoken.c</FILENAME>
+      <LINE>166</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6308</DEFECTCODE>
+    <DESCRIPTION>realloc может возвратить пустой указатель: присвоение пустого указателя переменной "factory-&gt;pools", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти.</DESCRIPTION>
+    <FUNCTION>newPool</FUNCTION>
+    <DECORATED>newPool</DECORATED>
+    <FUNCLINE>152</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+      <FILENAME>antlr3commontoken.c</FILENAME>
+      <LINE>172</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>28182</DEFECTCODE>
+    <DESCRIPTION>Разыменование пустого (NULL) указателя. "factory-&gt;pools" содержит то же значение NULL, которое находилось в "realloc()`166". </DESCRIPTION>
+    <FUNCTION>newPool</FUNCTION>
+    <DECORATED>newPool</DECORATED>
+    <FUNCLINE>152</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+        <FILENAME>antlr3commontoken.c</FILENAME>
+        <LINE>156</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+        <FILENAME>antlr3commontoken.c</FILENAME>
+        <LINE>161</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+        <FILENAME>antlr3commontoken.c</FILENAME>
+        <LINE>165</LINE>
+        <COLUMN>23</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>"&lt;символ&gt;" может быть равно NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+        <FILENAME>antlr3commontoken.c</FILENAME>
+        <LINE>172</LINE>
+        <COLUMN>42</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>"&lt;символ&gt;" разыменовано, но, возможно, по-прежнему равно NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

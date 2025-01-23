@@ -1,0 +1,339 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"tree->children\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                },
+                "region": {
+                  "startLine": 214,
+                  "startColumn": 3,
+                  "endLine": 214,
+                  "endColumn": 84
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addChild",
+                  "decoratedName": "addChild",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 146,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 149,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 154,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 206,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "\"tree->children\" может быть равно NULL (Войти в эту ветвь)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 211,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 214,
+                            "startColumn": 17
+                          }
+                        },
+                        "message": {
+                          "text": "\"tree->children\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"tree->children\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                },
+                "region": {
+                  "startLine": 242,
+                  "startColumn": 2,
+                  "endLine": 242,
+                  "endColumn": 54
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "setChild",
+                  "decoratedName": "setChild",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 238,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "\"tree->children\" может быть равно NULL (Войти в эту ветвь)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 240,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+                          },
+                          "region": {
+                            "startLine": 242,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "\"tree->children\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33139.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3basetree.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "1dad9fcc70302ce3cd2a6052a098bcdbc1a660c1a0a948852b1fa60be9e741f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3basetree.h"
+          },
+          "hashes": {
+            "sha-256": "b6652e39f17c945c830999ab66fae040f647452bc07815d1a99225235fa25a23"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3defs.h"
+          },
+          "hashes": {
+            "sha-256": "991565fd8fdc99206c1ce5013607216f22fb83209e83b62ffbc06a65266f0ae9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3errors.h"
+          },
+          "hashes": {
+            "sha-256": "f8c5f4a2af0fdb1875e56e7b0e5fe708aa59432d27fd6313a0e04c960b509e53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3interfaces.h"
+          },
+          "hashes": {
+            "sha-256": "6b3a8f15b25aa30ab71eb783657cd1f91bc12dbe9138c98964f8563587c097d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3convertutf.h"
+          },
+          "hashes": {
+            "sha-256": "74d28be02386cf32e62f873c339e93ea5cb3de19d1787a9600d17951e55cec93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3collections.h"
+          },
+          "hashes": {
+            "sha-256": "efc122caa18134e851c01eb3746a66321ee8f67552e81ced94b60d2161f05a9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3bitset.h"
+          },
+          "hashes": {
+            "sha-256": "e35600da6d92397ef38015dd7f782188931308f5087415f6ea57c108a0e29269"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3string.h"
+          },
+          "hashes": {
+            "sha-256": "07176c48b71cae9a216dd444f3dedb193a93dd895f1f4e435a2f782895678efe"
+          }
+        }
+      ]
+    }
+  ]
+}

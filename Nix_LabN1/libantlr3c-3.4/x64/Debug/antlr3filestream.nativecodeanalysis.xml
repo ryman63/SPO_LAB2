@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Nix_LabN2\Nix_LabN1\libantlr3c-3.4\src\</FILEPATH>
+      <FILENAME>antlr3filestream.c</FILENAME>
+      <LINE>236</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>6287</DEFECTCODE>
+    <DESCRIPTION>Избыточный код.</DESCRIPTION>
+    <FUNCTION>setupInputStream</FUNCTION>
+    <DECORATED>setupInputStream</DECORATED>
+    <FUNCLINE>130</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

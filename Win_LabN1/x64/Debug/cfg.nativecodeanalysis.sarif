@@ -81,6 +81,383 @@
               ]
             }
           ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"createNode\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 2,
+                  "endLine": 23,
+                  "endColumn": 26
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "createOpNode",
+                  "decoratedName": "createOpNode",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "\"createNode\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 23,
+                            "startColumn": 24
+                          }
+                        },
+                        "message": {
+                          "text": "\"createNode\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "\"tokenCopy\" может быть равен \"0\":  это не соответствует спецификации функции \"strcpy_s\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                },
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 2,
+                  "endLine": 143,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "strCpy",
+                  "decoratedName": "strCpy",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" является аргументом ввода-вывода для \"strcpy_s\" (объявлено в c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\string.h: 32)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" не должно равняться NULL, поскольку это не соответствует SAL-аннотации для \"strcpy_s\""
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"tokenCopy\". Самое раннее расположение, где это могло произойти, см. в строке 143"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                },
+                "region": {
+                  "startLine": 148,
+                  "startColumn": 2,
+                  "endLine": 148,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "strCpy",
+                  "decoratedName": "strCpy",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 139,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 140,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 143,
+                            "startColumn": 2
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" является аргументом ввода-вывода для \"strcpy_s\" (объявлено в c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\string.h: 32)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 148,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "\"tokenCopy\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"root\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                },
+                "region": {
+                  "startLine": 157,
+                  "startColumn": 6,
+                  "endLine": 157,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TraverseCfg",
+                  "decoratedName": "TraverseCfg",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 153,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "\"root\" может быть равно NULL (Пропустить эту ветвь)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/cfg.c"
+                          },
+                          "region": {
+                            "startLine": 157,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "\"root\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "tool": {
@@ -106,7 +483,7 @@
             "resultFile"
           ],
           "hashes": {
-            "sha-256": "8d5cf9078200193bfb127a4c2e7b5be68174ccb04c77eac686f654bce6f571be"
+            "sha-256": "0a8e3fb3ca98ac15720a7064ff74bdea5d118a30340b1c84dd81092101984853"
           }
         },
         {
@@ -114,7 +491,7 @@
             "uri": "file:///c:/nix_labn2/nix_labn1/src/cfg.h"
           },
           "hashes": {
-            "sha-256": "b0dcb064f47cfb332978e20a1fd79290f97cadcf864d1a7b6a9fba1be2890f4e"
+            "sha-256": "7fd51883118a59e5d64c899bdb58a42a1820af866eec7bbc646189522f6a5f9d"
           }
         },
         {

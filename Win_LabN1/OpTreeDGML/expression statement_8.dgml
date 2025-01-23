@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="23" Label="assignment"/>
-    <Node Id="24" Label="write"/>
-    <Node Id="25" Label="i"/>
-    <Node Id="26" Label="+"/>
-    <Node Id="27" Label="read"/>
-    <Node Id="28" Label="i"/>
-    <Node Id="29" Label="read"/>
-    <Node Id="30" Label="1"/>
+    <Node Id="33" Label="assignment"/>
+    <Node Id="34" Label="write"/>
+    <Node Id="35" Label="index"/>
+    <Node Id="36" Label="array"/>
+    <Node Id="37" Label="arr"/>
+    <Node Id="38" Label="index"/>
+    <Node Id="39" Label="i"/>
+    <Node Id="40" Label="read"/>
+    <Node Id="41" Label="0"/>
   </Nodes>
   <Links>
-    <Link Source="23" Target="24"/>
-    <Link Source="24" Target="25"/>
-    <Link Source="23" Target="26"/>
-    <Link Source="26" Target="27"/>
-    <Link Source="27" Target="28"/>
-    <Link Source="26" Target="29"/>
-    <Link Source="29" Target="30"/>
+    <Link Source="33" Target="34"/>
+    <Link Source="34" Target="35"/>
+    <Link Source="35" Target="36"/>
+    <Link Source="36" Target="37"/>
+    <Link Source="35" Target="38"/>
+    <Link Source="38" Target="39"/>
+    <Link Source="33" Target="40"/>
+    <Link Source="40" Target="41"/>
   </Links>
 </DirectedGraph>

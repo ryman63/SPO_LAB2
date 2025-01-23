@@ -1,0 +1,279 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"state\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                },
+                "region": {
+                  "startLine": 479,
+                  "startColumn": 5,
+                  "endLine": 479,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "antlr38BitMark",
+                  "decoratedName": "antlr38BitMark",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 447,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 448,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 450,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 454,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 459,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 461,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "\"state\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 465,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+                          },
+                          "region": {
+                            "startLine": 479,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "\"state\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33139.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3inputstream.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "76ed7901399ac0c15bb606f8a36d6fddb258c0c5b6cf8fce4dae8f02af8ed60e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3input.h"
+          },
+          "hashes": {
+            "sha-256": "85bca0c19503448018be2c3c68e04a3fa20bea601f9974d3256261d5a70576f1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3defs.h"
+          },
+          "hashes": {
+            "sha-256": "991565fd8fdc99206c1ce5013607216f22fb83209e83b62ffbc06a65266f0ae9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3errors.h"
+          },
+          "hashes": {
+            "sha-256": "f8c5f4a2af0fdb1875e56e7b0e5fe708aa59432d27fd6313a0e04c960b509e53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3interfaces.h"
+          },
+          "hashes": {
+            "sha-256": "6b3a8f15b25aa30ab71eb783657cd1f91bc12dbe9138c98964f8563587c097d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3convertutf.h"
+          },
+          "hashes": {
+            "sha-256": "74d28be02386cf32e62f873c339e93ea5cb3de19d1787a9600d17951e55cec93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3string.h"
+          },
+          "hashes": {
+            "sha-256": "07176c48b71cae9a216dd444f3dedb193a93dd895f1f4e435a2f782895678efe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3collections.h"
+          },
+          "hashes": {
+            "sha-256": "efc122caa18134e851c01eb3746a66321ee8f67552e81ced94b60d2161f05a9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3bitset.h"
+          },
+          "hashes": {
+            "sha-256": "e35600da6d92397ef38015dd7f782188931308f5087415f6ea57c108a0e29269"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3commontoken.h"
+          },
+          "hashes": {
+            "sha-256": "932997f2fe459f3ca1ead505ed41ac4dc90c58ede4cf2b4dfe93765f1751ff68"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3intstream.h"
+          },
+          "hashes": {
+            "sha-256": "40b503a987674c1b34a42cd438438153e75b200216de29e8f3253afb38840194"
+          }
+        }
+      ]
+    }
+  ]
+}

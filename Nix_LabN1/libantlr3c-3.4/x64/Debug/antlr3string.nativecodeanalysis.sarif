@@ -1,0 +1,2256 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"string->chars\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 435,
+                  "startColumn": 7,
+                  "endLine": 435,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newSize8",
+                  "decoratedName": "newSize8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 423,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 425,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 427,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 434,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 435,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"string->chars\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 463,
+                  "startColumn": 7,
+                  "endLine": 463,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newSizeUTF16",
+                  "decoratedName": "newSizeUTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 451,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 453,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 455,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 462,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 463,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 803,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "append8",
+                  "decoratedName": "append8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 826,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "appendUTF16_8",
+                  "decoratedName": "appendUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Разыменование пустого (NULL) указателя. \"apPoint\" содержит то же значение NULL, которое находилось в \"realloc()`826\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 837,
+                  "startColumn": 6,
+                  "endLine": 837,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "appendUTF16_8",
+                  "decoratedName": "appendUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 818,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 819,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 820,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 822,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 824,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 826,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 827,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 830,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "\"apPoint\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 831,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 833,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 833,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить этот цикл (предполагается, что \"count<len\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 837,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"apPoint\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 860,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "appendUTF16_UTF16",
+                  "decoratedName": "appendUTF16_UTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 880,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "set8",
+                  "decoratedName": "set8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 903,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "setUTF16_8",
+                  "decoratedName": "setUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Разыменование пустого (NULL) указателя. \"apPoint\" содержит то же значение NULL, которое находилось в \"realloc()`903\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 913,
+                  "startColumn": 6,
+                  "endLine": 913,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "setUTF16_8",
+                  "decoratedName": "setUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 896,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 897,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 898,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 900,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 901,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 903,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 904,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 906,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "\"apPoint\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 907,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 909,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 909,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить этот цикл (предполагается, что \"count<string->len\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 913,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"apPoint\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 936,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "setUTF16_UTF16",
+                  "decoratedName": "setUTF16_UTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 954,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addc8",
+                  "decoratedName": "addc8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"string->chars+string->len\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 957,
+                  "startColumn": 7,
+                  "endLine": 957,
+                  "endColumn": 52
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addc8",
+                  "decoratedName": "addc8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 952,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 954,
+                            "startColumn": 17
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 955,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 957,
+                            "startColumn": 36
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"string->chars+string->len+1\". Самое раннее расположение, где это могло произойти, см. в строке 957"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 958,
+                  "startColumn": 7,
+                  "endLine": 958,
+                  "endColumn": 42
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addc8",
+                  "decoratedName": "addc8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 952,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 954,
+                            "startColumn": 17
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 955,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 957,
+                            "startColumn": 36
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 958,
+                            "startColumn": 40
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 971,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addcUTF16",
+                  "decoratedName": "addcUTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"ptr+string->len\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 976,
+                  "startColumn": 7,
+                  "endLine": 976,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addcUTF16",
+                  "decoratedName": "addcUTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 967,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 969,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 971,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 972,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 974,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "\"ptr\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 976,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "\"ptr\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"ptr+string->len+1\". Самое раннее расположение, где это могло произойти, см. в строке 976"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 977,
+                  "startColumn": 7,
+                  "endLine": 977,
+                  "endColumn": 32
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "addcUTF16",
+                  "decoratedName": "addcUTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 967,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 969,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 971,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 972,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 974,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "\"ptr\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 976,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 977,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "\"ptr\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1038,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "insert8",
+                  "decoratedName": "insert8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1076,
+                  "startColumn": 34
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "insertUTF16_8",
+                  "decoratedName": "insertUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"inPoint+count\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1089,
+                  "startColumn": 5,
+                  "endLine": 1089,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "insertUTF16_8",
+                  "decoratedName": "insertUTF16_8",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1058,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1059,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1060,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1062,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1067,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1069,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1074,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1076,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1077,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1082,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1084,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1086,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "\"inPoint\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1087,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1087,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в этот цикл (предполагается \"count<len\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1089,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "\"inPoint\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6308",
+          "message": {
+            "text": "realloc может возвратить пустой указатель: присвоение пустого указателя переменной \"string->chars\", которая передается в качестве аргумента функции realloc, приведет к утечке исходного блока памяти."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1123,
+                  "startColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "insertUTF16_UTF16",
+                  "decoratedName": "insertUTF16_UTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"newStr->chars+i\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1394,
+                  "startColumn": 5,
+                  "endLine": 1394,
+                  "endColumn": 57
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "to8_UTF16",
+                  "decoratedName": "to8_UTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1367,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1368,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1372,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1374,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1381,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1382,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1383,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1388,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1388,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в этот цикл (предполагается \"i<string->len\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1390,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1392,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1394,
+                            "startColumn": 24
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"newStr->chars+newStr->len\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                },
+                "region": {
+                  "startLine": 1399,
+                  "startColumn": 4,
+                  "endLine": 1399,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "to8_UTF16",
+                  "decoratedName": "to8_UTF16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1367,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1368,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1372,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1374,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1381,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1382,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1383,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1388,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1388,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить этот цикл (предполагается, что \"i<string->len\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+                          },
+                          "region": {
+                            "startLine": 1399,
+                            "startColumn": 33
+                          }
+                        },
+                        "message": {
+                          "text": "\"<символ>\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33139.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/libantlr3c-3.4/src/antlr3string.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "28ec3fb0d16a6876b02c3eecbe7b1fd283f642bab5ba3e631ef05b2045836787"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3string.h"
+          },
+          "hashes": {
+            "sha-256": "07176c48b71cae9a216dd444f3dedb193a93dd895f1f4e435a2f782895678efe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3defs.h"
+          },
+          "hashes": {
+            "sha-256": "991565fd8fdc99206c1ce5013607216f22fb83209e83b62ffbc06a65266f0ae9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3errors.h"
+          },
+          "hashes": {
+            "sha-256": "f8c5f4a2af0fdb1875e56e7b0e5fe708aa59432d27fd6313a0e04c960b509e53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3interfaces.h"
+          },
+          "hashes": {
+            "sha-256": "6b3a8f15b25aa30ab71eb783657cd1f91bc12dbe9138c98964f8563587c097d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3convertutf.h"
+          },
+          "hashes": {
+            "sha-256": "74d28be02386cf32e62f873c339e93ea5cb3de19d1787a9600d17951e55cec93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3collections.h"
+          },
+          "hashes": {
+            "sha-256": "efc122caa18134e851c01eb3746a66321ee8f67552e81ced94b60d2161f05a9c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/nix_labn2/nix_labn1/libantlr3c-3.4/include/antlr3bitset.h"
+          },
+          "hashes": {
+            "sha-256": "e35600da6d92397ef38015dd7f782188931308f5087415f6ea57c108a0e29269"
+          }
+        }
+      ]
+    }
+  ]
+}

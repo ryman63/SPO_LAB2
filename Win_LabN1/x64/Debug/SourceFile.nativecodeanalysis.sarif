@@ -3,7 +3,86 @@
   "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
   "runs": [
     {
-      "results": [],
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Разыменование пустого указателя \"srcFile\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/SourceFile.c"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 2,
+                  "endLine": 5,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GetSrcFile",
+                  "decoratedName": "GetSrcFile",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/SourceFile.c"
+                          },
+                          "region": {
+                            "startLine": 4,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"srcFile\" может быть равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/SourceFile.c"
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "\"srcFile\" разыменовано, но, возможно, по-прежнему равно NULL"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "tool": {
         "driver": {
           "name": "PREfast",
@@ -20,13 +99,14 @@
       "artifacts": [
         {
           "location": {
-            "uri": "file:///c:/nix_labn2/nix_labn1/src/sourcefile.c"
+            "uri": "file:///C:/Nix_LabN2/Nix_LabN1/src/SourceFile.c"
           },
           "roles": [
-            "analysisTarget"
+            "analysisTarget",
+            "resultFile"
           ],
           "hashes": {
-            "sha-256": "5d51c5844647e4707746cf2bd57c3182b2d3e6c73fa522568ac463d8e4124f89"
+            "sha-256": "0553c00333dba9eec194a32ad225317375748c4866880637f873725f258d9068"
           }
         },
         {

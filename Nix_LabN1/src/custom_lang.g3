@@ -4,7 +4,6 @@ options {
     output=AST;
     language=C;
     backtrack=true;
-
 }
 
 // Лексические правила (tokens)
@@ -110,15 +109,25 @@ funcDef
     : 'def' funcSignature basicStatement* 'end' -> ^(FUNC_DEF funcSignature basicStatement*)
     ;
 
-basicStatement : statement -> ^(STATEMENT statement);
+basicStatement 
+    : repeatStatement -> ^(STATEMENT repeatStatement)
+    | statement -> ^(STATEMENT statement)
+    ;
 
 statement
     : ifStatement            -> ^(IF_STATEMENT ifStatement)
     | loopStatement          -> ^(LOOP_STATEMENT loopStatement)
-    | repeatStatement        -> ^(REPEAT_STATEMENT repeatStatement)
     | breakStatement         -> ^(BREAK_STATEMENT breakStatement)
     | expressionStatement    -> ^(EXPRESSION_STATEMENT expressionStatement)
     | blockStatement         -> ^(BLOCK_STATEMENT blockStatement)
+    ;
+
+simpleStatement
+    : statement -> ^(STATEMENT statement)
+    ;
+
+repeatStatement
+    : simpleStatement ('while'|'until') expression ';' -> ^(REPEAT_STATEMENT simpleStatement expression)
     ;
 
 ifStatement
@@ -129,10 +138,6 @@ ifStatement
 
 loopStatement
     : ('while'|'until')! expression basicStatement* 'end'!
-    ;
-
-repeatStatement
-    : 'repeat' basicStatement ('while'|'until') expression ';'
     ;
 
 breakStatement

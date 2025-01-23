@@ -46,7 +46,7 @@ AstNode* parseCustomLang (char* inputFilePath, char* buffErrors) {
     AstNode* root = createNode("source");
 
     fillAst(tree, root);
-    fixAst(root);
+    //fixAst(root);
 
     parser->free(parser);
     tokens->free(tokens);

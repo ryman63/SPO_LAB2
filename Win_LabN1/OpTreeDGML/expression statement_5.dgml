@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="10" Label="assignment"/>
-    <Node Id="11" Label="write"/>
-    <Node Id="12" Label="SLICE_EXPR"/>
-    <Node Id="13" Label="*"/>
-    <Node Id="14" Label="read"/>
-    <Node Id="15" Label="SLICE_EXPR"/>
-    <Node Id="16" Label="read"/>
-    <Node Id="17" Label="2"/>
+    <Node Id="13" Label="assignment"/>
+    <Node Id="14" Label="write"/>
+    <Node Id="15" Label="index"/>
+    <Node Id="16" Label="array"/>
+    <Node Id="17" Label="arr"/>
+    <Node Id="18" Label="index"/>
+    <Node Id="19" Label="i"/>
+    <Node Id="20" Label="*"/>
+    <Node Id="21" Label="index"/>
+    <Node Id="22" Label="array"/>
+    <Node Id="23" Label="arr"/>
+    <Node Id="24" Label="index"/>
+    <Node Id="25" Label="i"/>
+    <Node Id="26" Label="read"/>
+    <Node Id="27" Label="2"/>
   </Nodes>
   <Links>
-    <Link Source="10" Target="11"/>
-    <Link Source="11" Target="12"/>
-    <Link Source="10" Target="13"/>
     <Link Source="13" Target="14"/>
     <Link Source="14" Target="15"/>
-    <Link Source="13" Target="16"/>
+    <Link Source="15" Target="16"/>
     <Link Source="16" Target="17"/>
+    <Link Source="15" Target="18"/>
+    <Link Source="18" Target="19"/>
+    <Link Source="13" Target="20"/>
+    <Link Source="20" Target="21"/>
+    <Link Source="21" Target="22"/>
+    <Link Source="22" Target="23"/>
+    <Link Source="21" Target="24"/>
+    <Link Source="24" Target="25"/>
+    <Link Source="20" Target="26"/>
+    <Link Source="26" Target="27"/>
   </Links>
 </DirectedGraph>

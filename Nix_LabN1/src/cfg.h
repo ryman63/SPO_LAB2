@@ -2,6 +2,8 @@
 #include "Array.h"
 #include <libxml/tree.h>
 #include <libxml/parser.h>
+#include <stdbool.h>
+
 //enum Operations {
 //assign,
 //
@@ -9,6 +11,11 @@
 
 static int cfg_id_counter = 0;
 static int opNode_id_counter = 0;
+
+#define MAX_NODES 1000
+
+static bool visited[MAX_NODES] = { false };
+static bool visited2[MAX_NODES] = { false };
 
 typedef struct OpNode {
 	int id;

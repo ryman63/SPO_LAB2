@@ -30,6 +30,12 @@ OpNode* createOpNode(char* operation)
 }
 
 void addNodesAndLinksCfg(xmlNodePtr nodes, xmlNodePtr links, CfgNode* node) {
+
+	if (visited[node->id])
+		return;
+
+	visited[node->id] = true;
+
 	// Создаем элемент Node для текущего узла
 	char id_str[12];
 	snprintf(id_str, 12, "%d", node->id); // Преобразуем id в строку
@@ -150,6 +156,11 @@ char* strCpy(char* src) {
 }
 
 void TraverseCfg(CfgNode* root, int(*operation)(OpNode*, const char*)) {
+	if (visited2[root->id])
+		return;
+
+	visited2[root->id] = true;
+
 	if (root) {
 		if (root->condJump) TraverseCfg(root->condJump, operation);
 		if (root->uncondJump) TraverseCfg(root->uncondJump, operation);
